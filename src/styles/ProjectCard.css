@@ -1,0 +1,58 @@
+.project-card {
+    background: #ffffff; /* White background */
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    padding: 2rem; /* Space inside the card */
+    max-width: 600px; /* Restrict card width */
+    text-align: left; /* Align text to the left */
+    margin: 1rem auto; /* Center the card and add vertical spacing */
+}
+
+.project-image {
+    width: 100%; /* Full width */
+    height: auto; /* Keep aspect ratio */
+    border-radius: 12px; /* Rounded corners for the image */
+    margin-bottom: 1.5rem; /* Add spacing below the image */
+}
+
+.project-title {
+    font-size: 1.8rem; /* Bold and large title */
+    font-weight: 700;
+    color: #2c2c2c; /* Dark gray */
+    margin-top: -0.5rem; /* Move the title slightly upwards */
+    margin-bottom: 0.8rem; /* Space below the title */
+    text-decoration: underline; /* Add underline to the title */
+}
+
+.project-description {
+    font-size: 1rem; /* Medium font size for readability */
+    color: #555555; /* Medium gray */
+    line-height: 1.8; /* Improve readability with spacing between lines */
+    margin-bottom: 1.5rem; /* Space below the description */
+}
+
+.project-skills {
+    font-size: 0.9rem; /* Slightly smaller font size */
+    color: #777777; /* Lighter gray for subtext */
+    margin-bottom: 1.5rem; /* Add spacing after skills */
+}
+
+.view-button {
+    background-color: #7bb8f8; /* Purple button */
+    color: #ffffff; /* White text */
+    padding: 0.8rem 2rem; /* Button size */
+    border-radius: 8px; /* Rounded button corners */
+    font-size: 1rem; /* Text size */
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.view-button:hover {
+    background-color: #5ea5f2; /* Darker purple on hover */
+}
+
+
+

@@ -1,0 +1,717 @@
+.projects-section {
+  background-color: #f8f4f0; /* Cream background */
+  padding: 3rem 10%; /* Add padding on all sides */
+  font-family: 'Poppins', sans-serif; /* Use clean font */
+}
+
+.projects-title {
+  font-size: 3rem; /* Keep the large font size */
+  font-weight: bold;
+  text-align: center;
+  color: #2c2c2c; /* Dark gray */
+  margin-top: -1rem; /* Move the title upwards */
+  margin-bottom: 1.5rem; /* Adjust spacing below the title */
+}
+
+.projects-subtitle {
+  font-size: 1.8rem; /* Medium subtitle size */
+  text-align: center;
+  text-decoration: underline;
+  margin-top: -1rem; /* Move the subtitle upwards */
+  margin-bottom: 2.5rem; /* Adjust spacing below the subtitle */
+  font-weight: 500;
+  color: #4c4c4c; /* Medium gray */
+}
+
+
+
+.projects-container {
+  display: flex;
+  flex-direction: column; /* Stack projects vertically */
+  align-items: center; /* Center align the projects */
+  gap: 3rem; /* Add space between the projects */
+  max-width: 1400px; /* Restrict the container width */
+  margin: 0 auto; /* Center the container */
+  padding: 0 3rem; /* Add equal padding on both sides */
+}
+
+
+.project-left {
+  flex: 1; /* Left section occupies equal space */
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1.5rem; /* Add extra margin below the image */
+}
+
+
+.project-image {
+  width: 100%; /* Ensure it takes the container's width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 12px;
+  max-width: 800px; /* You can set a larger max width */
+}
+
+
+.project-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #333333;
+}
+
+.project-description {
+  font-size: 1.2rem;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column; /* Stack contents vertically */
+  align-items: flex-start; /* Align contents to the left by default */
+  justify-content: center; /* Center vertically */
+  height: 100%; /* Ensure the container takes full height */
+}
+
+.project-skills {
+  font-size: 3rem; /* Slightly smaller font size */
+  color: #777777; /* Lighter gray for subtext */
+  margin-bottom: 1.5rem; /* Add spacing after skills */
+  text-align: left; /* Explicitly align text to the left */
+  width: 100%; /* Ensure full width alignment */
+}
+
+.view-button {
+  background-color: #98c0f4; /* Purple button */
+  color: #ffffff; /* White text */
+  padding: 0.8rem 2rem; /* Button size */
+  border-radius: 8px; /* Rounded button corners */
+  font-size: 1rem; /* Text size */
+  font-weight: bold;
+  text-decoration: none; /* Remove underline */
+  text-align: center; /* Center text inside the button */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+  align-self: center; /* Center the button horizontally */
+  margin-top: 1.5rem; /* Add spacing above the button */
+}
+
+
+.view-button:hover {
+  background-color: #98c0f4; /* Darker purple on hover */
+}
+
+
+.project-right {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden; /* Prevent overflow of mockups */
+}
+
+.mockup-screen {
+  width: 100%; /* Adjust size to fit container */
+  max-width: 180px; /* Limit the size of the mockups */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mockup-first {
+  position: relative;
+  top: 80px;
+  z-index: 2;
+  margin-left: 20px;
+}
+
+.mockup-second {
+  position: relative;
+  top: 130px; /* Adjust positioning */
+  z-index: 1;
+  margin-left: 4px;
+}
+
+.mockup-third {
+  position: relative;
+  top: 180px; /* Adjust positioning */
+  z-index: 2;
+  margin-left: 4px;
+}
+
+
+
+/* Hover Effect for Mockups */
+.mockup-screen:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Block Container */
+.project-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9; /* Light background */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 16px; /* Rounded corners */
+  padding: 2rem; /* Inner padding */
+  margin: 2rem auto; /* Center alignment and spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 4000px; /* Restrict the width */
+  position: relative; /* Position for the numbered circle */
+}
+
+/* Number Circle */
+.project-number {
+  width: 50px;
+  height: 50px;
+  background-color: #98c0f4; /* Purple color */
+  color: #fff; /* White number text */
+  font-size: 1.5rem; /* Larger font for the number */
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Circular shape */
+  position: absolute;
+  top: -25px; /* Positioned above the block */
+  left: 25px; /* Positioned slightly inside the block */
+}
+
+/* Content Container */
+.project-content {
+  display: flex;
+  justify-content: space-between; /* Equal spacing between sections */
+  align-items: flex-start;
+  gap: 1rem; /* Space between the card and mockups */
+  width: 100%; /* Full width of the block */
+}
+
+/* Left Section */
+.project-left {
+  flex: 1;
+  max-width: 50%; /* Half width for the card */
+}
+
+.projects-container {
+  padding-right: 6rem; /* Add extra space on the right side */
+  margin: 0 auto; /* Keep the container centered */
+}
+
+
+/* Right Section */
+.project-right {
+  flex: 1;
+  max-width: 50%; /* Half width for the mockups */
+  display: flex;
+  justify-content: space-evenly; /* Evenly spaced mockups */
+  align-items: left;
+  
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .project-content {
+      flex-direction: column; /* Stack the left and right sections */
+      gap: 1rem;
+  }
+
+  .project-right {
+      justify-content: left; /* Center the mockups */
+  }
+}
+
+
+.unique-project-block {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 2000px;
+  position: relative;
+  overflow: visible; /* Allow the content to flow */
+  min-height: 600px; /* Increased minimum height */
+}
+
+/* Adjust the project-content container to respect the increased height */
+.project-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  height: 100%; /* Stretch to fill the container */
+}
+
+/* Optional: Ensure the mockup section respects the block height */
+.project-right {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 1rem;
+  position: relative;
+  overflow: visible;
+  min-height: 400px; /* Ensure the right section has enough space */
+}
+
+
+.unique-project-block .project-number {
+  width: 50px;
+  height: 50px;
+  background-color: #86b7f7; /* Purple color */
+  color: #fff; /* White number text */
+  font-size: 1.5rem; /* Larger font for the number */
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Circular shape */
+  position: absolute;
+  top: -25px; /* Positioned above the block */
+  left: 25px; /* Positioned slightly inside the block */
+}
+
+.unique-project-block .project-content {
+  display: flex;
+  justify-content: space-between; /* Equal spacing between sections */
+  align-items: flex-start;
+  gap: 1rem; /* Space between the card and mockups */
+  width: 100%; /* Full width of the block */
+}
+
+.unique-project-block .project-left {
+  flex: 1;
+  max-width: 50%; /* Half width for the card */
+  padding-left: 1rem; /* Add some padding to the left */
+}
+
+.unique-project-block .project-right {
+  flex: 1;
+  max-width: 50%; /* Half width for the mockups */
+  display: flex;
+  justify-content: space-evenly; /* Evenly spaced mockups */
+  align-items: flex-start;
+  padding-right: 2rem; /* Add space on the right side */
+  gap: 1rem; /* Spacing between the mockups */
+}
+
+
+.fullscreen-image {
+  position: fixed; /* Fix the image to the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  object-fit: cover; /* Ensure the image covers the entire area */
+  background-color: #000; /* Optional: Black background */
+  z-index: 10; /* Ensure it stays above other elements */
+}
+
+
+/* UI/UX Designing Section */
+.white-background {
+  background-color: #ffffff; /* White background */
+  padding: 3rem 10%;
+}
+
+/* Web Development Section */
+.blue-background {
+  background-color: #e8f5fe; /* Light blue background */
+  padding: 3rem 10%;
+}
+
+/* Common styling for projects */
+.projects-section {
+  font-family: 'Poppins', sans-serif;
+}
+
+.projects-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: #2c2c2c;
+  margin-bottom: 2rem;
+}
+
+.projects-subtitle {
+  font-size: 1.8rem;
+  text-align: center;
+  text-decoration: underline;
+  color: #4c4c4c;
+  margin-bottom: 2.5rem;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+
+/* Increase size of mockups in the Web Development section only */
+.blue-background .mockup-screen {
+  width: 350px; /* Larger size for Web Development mockups */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+  transition: transform 0.3s ease-in-out; /* Hover effect */
+}
+
+
+/* Adjust Web Development mockup layout to be vertical */
+.blue-background .project-right {
+display: flex;
+flex-direction: column; /* Stack items vertically */
+align-items: center; /* Center align the images */
+gap: 2rem; /* Add spacing between the images */
+}
+
+
+.blue-background .mockup-screen:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+
+/* Style adjustments for Web Development section */
+.blue-background .projects-container {
+  display: flex;
+  justify-content: space-between; /* Ensure even spacing between projects */
+  flex-wrap: wrap; /* Adjust for smaller screens */
+  gap: 2rem; /* Add spacing between the projects */
+}
+
+.blue-background .project-content {
+  display: flex;
+  justify-content: space-between; /* Align the cards side by side */
+  gap: 2rem; /* Add space between the cards */
+}
+
+.project-left {
+  flex: 1; /* Equal space for both project cards */
+  max-width: 48%; /* Slight margin for responsiveness */
+}
+
+
+/* Ensure all project cards have the same height */
+.project-content {
+  display: flex; /* Arrange items in a row */
+  justify-content: space-between; /* Add space between cards */
+  align-items: stretch; /* Ensure all cards have the same height */
+  gap: 2rem; /* Space between cards */
+}
+
+/* Ensure equal height for the project-left cards */
+.project-left {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Space out content evenly */
+  height: 100%; /* Ensure full height of the container */
+  box-sizing: border-box; /* Include padding/border in height */
+}
+
+/* Ensure image and text are balanced */
+.project-card {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  height: 100%; /* Ensure consistent height */
+  justify-content: space-between; /* Space out image and button evenly */
+}
+
+
+/* Add hover effect to the cards */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+  transform: translateY(0); /* Default position */
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02); /* Move up slightly and scale up */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Add a subtle shadow effect */
+}
+
+/* Add hover effect to the image as well */
+.project-image {
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05); /* Slightly zoom the image on hover */
+}
+
+/* Buttons container */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem; /* Space between buttons */
+  margin-top: 1.5rem;
+}
+
+/* View Case Study Button */
+.view-button {
+  background-color: #98c0f4; /* Purple */
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Video Walkthrough Button */
+.secondary-button {
+  background-color: #4caf50; /* Green */
+}
+
+.view-button:hover {
+  background-color: #5549e2; /* Darker purple */
+}
+
+.secondary-button:hover {
+  background-color: #3e8e41; /* Darker green */
+}
+
+
+.blue-background {
+  position: relative;
+  background: #deeafb; /* Light blue background */
+  overflow: hidden; /* Prevent overflow */
+  padding: 3rem 10%;
+}
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%; /* Seamless waves */
+  height: 350px; /* Wave height */
+  background: rgba(229, 239, 250, 0.6); /* Main wave color (blue) */
+  opacity: 0.6;
+  border-radius: 50%; /* Smooth rounded edges */
+  animation: wave-motion 6s infinite ease-in-out;
+}
+
+.waves::before,
+.waves::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 200%; /* Seamless waves */
+  height: 350px; /* Wave height for all layers */
+  border-radius: 50%; /* Smooth rounded edges */
+  animation: wave-motion 8s infinite ease-in-out;
+}
+
+.waves::before {
+  background: rgba(171, 207, 243, 0.4); /* Second wave color (darker blue) */
+}
+
+.waves::after {
+  background: rgba(173, 210, 247, 0.2); /* Third wave color (even darker blue) */
+  animation-duration: 10s;
+}
+
+@keyframes wave-motion {
+  0% {
+    transform: translateX(0) translateY(0); /* Start at the bottom */
+  }
+  25% {
+    transform: translateX(-25px) translateY(-350px); /* Move higher */
+  }
+  50% {
+    transform: translateX(-50px) translateY(0); /* Return to original */
+  }
+  75% {
+    transform: translateX(-75px) translateY(-250px); /* Move up again */
+  }
+  100% {
+    transform: translateX(0) translateY(0); /* Return to start */
+  }
+}
+
+
+
+
+
+@keyframes slideUp {
+  0% {
+      opacity: 0;
+      transform: translateY(50px); /* Start slightly lower */
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); /* Move to normal position */
+  }
+}
+
+@keyframes zoomEffect {
+  0% {
+      transform: scale(0.8); /* Slight zoom out */
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1); /* Normal size */
+      opacity: 1;
+  }
+}
+
+/* Apply slide-up animation to the entire project block */
+.unique-project-block {
+  animation: slideUp 1.5s ease-out forwards;
+  opacity: 0; /* Initially hidden */
+}
+
+/* Apply zoom animation to the "View Case Study" button */
+.view-button {
+  animation: zoomEffect 1.5s ease-in-out forwards;
+  opacity: 0; /* Initially hidden */
+  animation-delay: 1s; /* Button appears slightly after the block */
+}
+
+
+
+
+
+
+
+
+
+
+/* ✅ Apply these changes ONLY in SPLIT-SCREEN mode (between 768px - 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  
+  /* ✅ Ensure the parent container is centered */
+  .projects-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* ✅ Decrease Outer Block Width */
+  .unique-project-block {
+    background: #f9f9f9;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 80vw; /* ⬇ Reduced width */
+    max-width: 700px; /* ⬇ Reduced max width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto 3rem -2rem; /* ✅ Ensures centering */
+  }
+
+  /* ✅ Inner Block (Project Card) - Keep it Wider */
+  .project-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 200%; /* ✅ Full width inside the outer block */
+    max-width: 750px; /* ✅ Keeps inner block wide */
+    height: auto; /* ✅ Allow height to adjust automatically */
+    position: relative;
+  }
+
+  /* ✅ Center "View Case Study" Button */
+ 
+
+  .view-button {
+    width: 70%;  /* Reduce width further */
+    max-width: 220px;  /* Limit the max width */
+    padding: 1.0rem 1.3rem;  /* Adjust padding */
+    position: relative;
+    transform: none;
+    margin: 1.5rem auto 1;
+  }
+
+  /* ✅ Hide mockup screens in SPLIT-SCREEN mode */
+  .project-right {
+    display: none !important;
+  }
+
+  .project-content {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .project-left {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+/* ✅ Apply changes ONLY for split-screen (Tablets) */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .web-development-project .button-container {
+    display: flex;
+    justify-content: center; /* Center align buttons */
+    gap: 15px; /* Space between buttons */
+  }
+
+  .web-development-project .secondary-button {
+    width: auto !important; /* Let it expand naturally */
+    min-width: 220px; /* Set a minimum width */
+    max-width: 280px; /* Ensure it doesn't go too wide */
+    padding: 0.8rem 1.6rem; /* Adjust padding */
+    text-align: center;
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+}
+
+/* ✅ Apply changes ONLY for Mobile Screens */
+@media screen and (max-width: 767px) {
+  .web-development-project .button-container {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+    gap: 10px; /* Space between stacked buttons */
+  }
+
+  .web-development-project .button-container a {
+    width: 100%; /* Allow button to expand full width */
+    max-width: 300px; /* Set max width */
+    text-align: center;
+  }
+
+  .web-development-project .secondary-button {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.9rem 1.8rem; /* Adjust padding */
+    text-align: center;
+    white-space: nowrap; /* Prevent wrapping */
+  }
+}

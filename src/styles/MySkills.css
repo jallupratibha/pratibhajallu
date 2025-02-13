@@ -1,0 +1,129 @@
+.skills-section {
+  background-color: #ffffff; /* White background */
+  padding: 5rem 10%; /* Increase padding for spacing */
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.skills-title {
+  font-size: 3.5rem; /* Increase font size */
+  font-weight: bold;
+  color: #333333; /* Dark text */
+  margin-bottom: 3rem; /* Adjust spacing below heading */
+  margin-top: -2rem; /* Pull heading slightly upward */
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem; /* Increase space between cards */
+  flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.skill-card::before {
+  content: ''; /* Add the colored header as a pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the card */
+  height: 100px; /* Increased height for the header */
+  background-color: #98c0f4; /* Blue header color */
+  border-top-left-radius: 12px; /* Match the card's border radius */
+  border-top-right-radius: 12px;
+  z-index: 1; /* Place it behind the title */
+}
+
+.skill-card {
+  background-color: #f8f8f8; /* Light gray for cards */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 5rem; /* Increase padding inside cards */
+  max-width: 400px; /* Larger width for the cards */
+  text-align: center; /* Center-align content */
+  flex: 1;
+  position: relative; /* For the header to stay within the card */
+  min-width: 300px; /* Ensure a minimum width for smaller screens */
+  padding-top: 120px; /* Adjust padding to account for taller header */
+}
+
+.skill-category {
+  font-size: 1.5rem; /* Larger font size for category titles */
+  font-weight: bold;
+  color: #ffffff; /* White text for better contrast */
+  margin: 0; /* Remove default margin */
+  position: absolute;
+  top: 35px; /* Adjust positioning to center text in the taller header */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 2; /* Place it above the header */
+  text-align: center;
+}
+
+
+
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+}
+
+.skill-card li {
+  font-size: 1.2rem; /* Slightly larger font size */
+  color: #666666;
+  margin-bottom: 0.8rem;
+  padding-left: 10px; /* Add slight padding for alignment */
+}
+
+
+
+
+
+
+
+
+/* ===========================
+   SPLIT-SCREEN MODE FIXES (601px - 1200px)
+   =========================== */
+   @media (max-width: 1200px) and (min-width: 601px) {
+    .skills-container {
+      display: flex;
+      flex-wrap: nowrap; /* Prevent wrapping */
+      justify-content: center;
+      align-items: stretch; /* Make cards equal height */
+      gap: 2rem; /* Increase gap for more spacing */
+    }
+  
+    .skill-card {
+      flex: 0; /* Prevent auto stretching */
+      width: auto; /* Remove fixed width */
+      max-width: 320px; /* Reduce width slightly */
+      min-width: 260px; /* Ensure they don’t shrink too much */
+      padding: 1.5rem; /* Slightly adjust padding */
+      min-height: 350px; /* Decrease height */
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Centers content inside */
+    }
+  
+    /* Adjust skill list spacing */
+    .skill-card ul {
+      margin-top: 6rem; /* Adjust spacing between header and list */
+    }
+  
+    /* Reduce font size for skill category */
+    .skill-category {
+      font-size: 1.2rem; /* Reduce font size */
+      top: 25px; /* Move titles slightly up */
+    }
+  
+    /* Move only the "Soft Skills" text lower */
+    .skill-card:last-child .skill-category {
+      top: 40px; /* Increase value to move it further down */
+    }
+  
+    /* Move only "Design Skills" heading down */
+    .skill-card:first-child .skill-category {
+      top: 40px; /* Move "Design Skills" slightly down */
+    }
+  }
+  
