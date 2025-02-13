@@ -1,0 +1,75 @@
+/* Contact Section */
+.contact-section {
+  background-color: #e8f5fe; /* Light blue background */
+  padding: 4rem 4rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* Clean font */
+  margin-bottom: 5rem; /* Add bottom margin for spacing between contact section and nav bar */
+}
+
+
+
+.contact-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333333; /* Dark text */
+}
+
+.contact-subtitle {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #555555; /* Medium gray */
+}
+
+.contact-description {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  color: #666666; /* Light gray for descriptive text */
+}
+
+/* Buttons Container */
+
+.contact-buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Space between buttons */
+  flex-wrap: wrap; /* Wrap buttons on smaller screens */
+}
+
+.contact-button {
+  background-color: #ffffff;
+  border: 2px solid #333333;
+  border-radius: 12px;
+  padding: 2rem 1.5rem; /* Increased padding for bigger boxes */
+  font-size: 1.3rem; /* Slightly larger text size */
+  font-weight: 600;
+  color: #333333;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.0rem; /* Increased spacing between text and icon */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 240px; /* Increased width of the box */
+  height: 180px; /* Increased height of the box */
+}
+
+.contact-button i {
+  font-size: 2.5rem;
+  color: #0f0f0f;
+}
+
+.contact-button span {
+  font-size: 1.5rem; /* Slightly larger text size */
+  color: #333333; /* Darker color for text */
+}
+
+.contact-button:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow */
+  background-color: #f4f4f4; /* Subtle hover effect */
+}
