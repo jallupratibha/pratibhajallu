@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/pratibhajallu/static/css/main.10d33b27.css",
-    "main.js": "/pratibhajallu/static/js/main.39b1c5f5.js",
+    "main.js": "/pratibhajallu/static/js/main.74a9cb72.js",
     "static/js/488.21a3b654.chunk.js": "/pratibhajallu/static/js/488.21a3b654.chunk.js",
     "static/media/fa-solid-900.ttf": "/pratibhajallu/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
     "static/media/fa-brands-400.ttf": "/pratibhajallu/static/media/fa-brands-400.1815e00441357e01619e.ttf",
@@ -13,11 +13,11 @@
     "static/media/fa-v4compatibility.woff2": "/pratibhajallu/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/pratibhajallu/index.html",
     "main.10d33b27.css.map": "/pratibhajallu/static/css/main.10d33b27.css.map",
-    "main.39b1c5f5.js.map": "/pratibhajallu/static/js/main.39b1c5f5.js.map",
+    "main.74a9cb72.js.map": "/pratibhajallu/static/js/main.74a9cb72.js.map",
     "488.21a3b654.chunk.js.map": "/pratibhajallu/static/js/488.21a3b654.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.10d33b27.css",
-    "static/js/main.39b1c5f5.js"
+    "static/js/main.74a9cb72.js"
   ]
 }

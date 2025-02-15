@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Route, Routes } from "react-router-dom"; // ✅ Changed to HashRouter
+import { HashRouter as Router, Route, Routes } from "react-router-dom"; // ✅ Already using HashRouter
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import './styles/Projects.css';
@@ -14,7 +14,7 @@ import CaseStudy from "./components/CaseStudy";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const App = () => (
-  <Router> {/* ✅ Changed to HashRouter */}
+  <Router basename="/pratibhajallu">  {/* ✅ Added basename */}
     <Routes>
       {/* Home Page */}
       <Route path="/" element={
