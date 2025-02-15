@@ -1,9 +1,7 @@
 import React from "react";
-import { HashRouter as Router, Route, Routes } from "react-router-dom"; // ✅ FIXED: Using HashRouter
+import { Route, Routes } from "react-router-dom";  // ✅ Only import Routes
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import './styles/Projects.css';
-
 import Projects from "./components/Projects";
 import MySkills from "./components/MySkills";
 import Contact from "./components/Contact";
@@ -14,12 +12,11 @@ import CaseStudy from "./components/CaseStudy";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const App = () => (
-  <Router basename={process.env.PUBLIC_URL}> {/* ✅ FIXED: Added basename */}
-    <Routes>
-      {/* Home Page */}
+  <>
+    <Navbar />
+    <Routes>  {/* ✅ Keep only <Routes> */}
       <Route path="/" element={
         <>
-          <Navbar />
           <Hero />
           <Projects />
           <MySkills />
@@ -27,11 +24,9 @@ const App = () => (
           <BottomNav />
         </>
       } />
-
-      {/* Case Study Page */}
       <Route path="/case-study/:id" element={<CaseStudy />} />
     </Routes>
-  </Router>
+  </>
 );
 
 export default App;
