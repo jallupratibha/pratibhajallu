@@ -17,15 +17,21 @@
 
 .hero-image {
     flex: 1;
-    text-align: right;
-    margin-left: 2rem; /* Added margin for balanced layout */
+    text-align: center; /* Center align the image */
+    margin-left: 0; /* Remove the extra left margin */
+    display: flex;
+    justify-content: center;
 }
 
+
 .hero-image img {
-    width: 700px;
-    height: 800px;
+    width: 100%; /* Make it responsive */
+    max-width: 500px; /* Set a reasonable max-width */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 12px;
+    object-fit: cover; /* Ensures the image fills its container without distortion */
 }
+
 
 .hero-intro {
     font-family: 'Poppins', sans-serif;
