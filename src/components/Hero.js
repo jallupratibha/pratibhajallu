@@ -12,8 +12,6 @@ const Hero = () => (
         <span className="hero-name">
           PRATIBHA JALLU <span className="wave">👋</span>
         </span>
-
-
       </p>
       <p className="hero-description">
         Your Go-To UI/UX Designer for Exceptional Digital Experiences. I craft user-centric designs that blend creativity and functionality, transforming ideas into stunning, seamless interfaces for apps, websites, and more.
@@ -30,8 +28,6 @@ const Hero = () => (
         ))}
       </div>
 
-
-
       <p className="hero-call-to-action">
         Simple, yet impactful! Let’s create something amazing together!
       </p>
@@ -40,16 +36,16 @@ const Hero = () => (
         <div className="links-container">
           <div className="social-icons">
             <a href="https://github.com/jallupratibha" target="_blank" rel="noreferrer">
-              <img src="/assets/github-icon.png" alt="GitHub" />
+              <img src={`${process.env.PUBLIC_URL}/assets/github-icon.png`} alt="GitHub" />
             </a>
             <a href="https://www.linkedin.com/in/pratibha-jallu-b749a5227/" target="_blank" rel="noreferrer">
-              <img src="/assets/linkedin-icon.png" alt="LinkedIn" />
+              <img src={`${process.env.PUBLIC_URL}/assets/linkedin-icon.png`} alt="LinkedIn" />
             </a>
             <a href="https://www.behance.net/pratibhajallu" target="_blank" rel="noreferrer">
-              <img src="/assets/behance-icon.png" alt="Behance" />
+              <img src={`${process.env.PUBLIC_URL}/assets/behance-icon.png`} alt="Behance" />
             </a>
             <a href="mailto:JAP508@pitt.edu">
-              <img src="/assets/mail-icon.png" alt="Email" />
+              <img src={`${process.env.PUBLIC_URL}/assets/mail-icon.png`} alt="Email" />
             </a>
           </div>
           <a
@@ -63,7 +59,7 @@ const Hero = () => (
       </div>
     </div>
     <div className="hero-image">
-      <img src="/assets/Pratibha.jpg" alt="Pratibha Jallu" />
+      <img src={`${process.env.PUBLIC_URL}/assets/Pratibha.jpg`} alt="Pratibha Jallu" />
     </div>
   </div>
 );

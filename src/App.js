@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Route, Routes } from "react-router-dom"; // ✅ Already using HashRouter
+import { HashRouter as Router, Route, Routes } from "react-router-dom"; // ✅ FIXED: Using HashRouter
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import './styles/Projects.css';
@@ -14,7 +14,7 @@ import CaseStudy from "./components/CaseStudy";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const App = () => (
-  <Router basename="/pratibhajallu">  {/* ✅ Added basename */}
+  <Router basename={process.env.PUBLIC_URL}> {/* ✅ FIXED: Added basename */}
     <Routes>
       {/* Home Page */}
       <Route path="/" element={
