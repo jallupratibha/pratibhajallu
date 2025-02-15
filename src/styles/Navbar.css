@@ -1,0 +1,382 @@
+.navbar {
+  position: fixed; /* Ensure navbar is fixed */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  background-color: #333333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+}
+
+.navbar-logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links li {
+  margin: 0;
+}
+
+.navbar-links a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.navbar-links a:hover {
+  color: #85bde7;
+}
+
+/* Add padding to body so content does not overlap with fixed navbar */
+body {
+  padding-top: 80px; /* Adjust to match navbar height */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+    body {
+        font-size: 1rem;
+    }
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-section {
+        text-align: center;
+    }
+    .project-card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .navbar-menu {
+        display: block;
+    }
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-section {
+        padding: 20px;
+    }
+    .project-card {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Ensure the design remains the same on full desktop screens */
+@media screen and (min-width: 1201px) {
+    body {
+        max-width: 100%;
+    }
+}
+
+/* Adjustments for split-screen desktops */
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 90%;
+        margin: auto;
+    }
+    .hero-section {
+        text-align: center;
+    }
+    .project-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Tablet adjustments */
+@media screen and (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-section {
+        text-align: center;
+        padding: 20px;
+    }
+    .project-card {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .navbar-menu {
+        display: block;
+        text-align: center;
+    }
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Small mobile screens */
+@media screen and (max-width: 480px) {
+    .hero-section {
+        padding: 20px;
+    }
+    .project-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .footer {
+        text-align: center;
+    }
+}
+
+/* Ensure full-screen desktop layout remains unchanged */
+@media screen and (min-width: 1201px) {
+    body {
+        max-width: 100%;
+    }
+}
+
+/* Adjustments for split-screen desktops (50% width) */
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 90%;
+        margin: auto;
+    }
+    .hero-section {
+        text-align: center;
+        padding: 30px;
+    }
+    .project-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Tablet adjustments (portrait & landscape) */
+@media screen and (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-section {
+        text-align: center;
+        padding: 30px;
+    }
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    .project-card img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Mobile adjustments (portrait mode) */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .navbar-menu {
+        display: block;
+        text-align: center;
+    }
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+    .project-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .project-card img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Small mobile screens (below 480px) */
+@media screen and (max-width: 480px) {
+    .hero-section {
+        padding: 20px;
+    }
+    .project-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .footer {
+        text-align: center;
+    }
+    .navbar {
+        padding: 10px;
+    }
+    .navbar-menu {
+        font-size: 14px;
+    }
+}
+
+/* Desktop full-screen remains unchanged */
+@media screen and (min-width: 1201px) {
+    body {
+        max-width: 100%;
+    }
+}
+
+/* Split-screen desktop (50% width) */
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 90%;
+        margin: auto;
+    }
+    .hero-section {
+        text-align: center;
+        padding: 40px;
+    }
+    .project-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .project-card img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Tablet adjustments */
+@media screen and (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-section {
+        text-align: center;
+        padding: 30px;
+    }
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .project-card img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .navbar-menu {
+        display: block;
+        text-align: center;
+    }
+    .hero-section h1 {
+        font-size: 1.6rem;
+    }
+    .project-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .project-card img {
+        max-width: 100%;
+        height: auto;
+    }
+    .footer {
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+/* Small Mobile adjustments */
+@media screen and (max-width: 480px) {
+    .hero-section {
+        padding: 20px;
+    }
+    .project-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .footer {
+        text-align: center;
+    }
+    .navbar {
+        padding: 10px;
+    }
+    .navbar-menu {
+        font-size: 14px;
+    }
+}
+
+/* Adjust Resume button position and move image down for mobile & split-screen */
+@media screen and (max-width: 1200px) {
+    .resume-button {
+        margin-left: -20px; /* Move resume button slightly left */
+    }
+    .hero-section img {
+        display: block;
+        margin: 20px auto; /* Push image down */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .resume-button {
+        margin-left: -25px; /* Further left adjustment */
+    }
+    .hero-section img {
+        margin-top: 30px; /* Increase spacing for a better visual match */
+    }
+}
