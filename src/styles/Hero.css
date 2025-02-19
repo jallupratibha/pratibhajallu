@@ -1,13 +1,29 @@
 .hero-container {
-    position: relative; /* To contain the background animation */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Align items in the center */
+    justify-content: space-between; /* Space out text & image */
+    flex-wrap: wrap; /* Ensure responsiveness */
     padding: 4rem 6rem;
-    background-color: transparent; /* Remove base background color */
+    background-color: transparent;
     color: white;
-    overflow: hidden; /* Prevent overflow from animations */
+    overflow: hidden;
 }
+
+/* Ensure the image is aligned properly */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%; /* Make image responsive */
+    max-width: 500px; /* Prevent it from growing too large */
+    height: auto;
+    border-radius: 12px;
+}
+
 
 
 .hero-content {
@@ -15,17 +31,7 @@
     padding-right: 3rem; /* Increased padding for more spacing */
 }
 
-.hero-image {
-    flex: 1;
-    text-align: right;
-    margin-left: 2rem; /* Added margin for balanced layout */
-}
 
-.hero-image img {
-    width: 700px;
-    height: 800px;
-    border-radius: 12px;
-}
 
 .hero-intro {
     font-family: 'Poppins', sans-serif;

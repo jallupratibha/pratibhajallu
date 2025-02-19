@@ -63,7 +63,9 @@ const Hero = () => (
       </div>
     </div>
     <div className="hero-image">
-      <img src="/assets/Pratibha.jpg" alt="Pratibha Jallu" />
+    <img src={process.env.PUBLIC_URL + "/assets/Pratibha.jpg"} alt="Pratibha Jallu" />
+
+
     </div>
   </div>
 );
