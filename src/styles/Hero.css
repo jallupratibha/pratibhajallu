@@ -1,198 +1,464 @@
-/* Global Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 16px; /* Set base font size */
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: #0D0D0D;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-/* Hero Section */
 .hero-container {
-    position: relative;
+    position: relative; /* To contain the background animation */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 4rem 6rem;
-    max-width: 1200px;
-    margin: auto;
+    background-color: transparent; /* Remove base background color */
+    color: white;
+    overflow: hidden; /* Prevent overflow from animations */
 }
+
 
 .hero-content {
     flex: 1;
-    padding-right: 2rem;
-    min-width: 300px;
+    padding-right: 3rem; /* Increased padding for more spacing */
 }
 
-/* Fix Image Scaling */
 .hero-image {
     flex: 1;
     text-align: right;
-    margin-left: 2rem;
+    margin-left: 2rem; /* Added margin for balanced layout */
 }
 
 .hero-image img {
-    max-width: 30%;
+    max-width: 100%;
+    width: auto;
     height: auto;
-    border-radius: 12px;
-    display: block;
-}
+  }
+  
 
-/* Fix Font Scaling */
 .hero-intro {
-    font-size: 2.2rem; /* 35px */
+    font-family: 'Poppins', sans-serif;
+    font-size: 46px;
     font-weight: 400;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+    color: #ffffff;
 }
 
 .hero-name {
-    font-size: 3rem; /* 48px */
+    font-family: 'Poppins', sans-serif;
+    font-size: 74px;
     font-weight: 800;
-    margin-bottom: 2rem;
-    line-height: 1.2;
+    margin-bottom: 2rem; /* Extra spacing below name */
+    color: #ffffff;
 }
 
 .hero-description,
 .hero-subtext,
 .hero-call-to-action {
-    font-size: 1.3rem; /* 22px */
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: 1.8; /* Increased line-height for readability */
     margin: 1rem 0;
 }
 
-/* Social Icons */
+.hero-links {
+    margin-top: 3rem; /* Added top margin for spacing */
+}
+
+.hero-links h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 1.5rem; /* Adjusted spacing */
+}
+
+.hero-description {
+    display: flex;
+    gap: 5rem; /* Wider spacing between icons */
+}
+
 .social-icons {
     display: flex;
-    gap: 1.2rem;
+    gap: 1.7rem; /* Wider spacing between icons */
+}
+
+
+.social-icons img {
+    width: 46px;
+    height: 46px;
+    transition: filter 0.3s ease; /* Smooth transition for color change */
+}
+
+
+.social-icons a:hover img {
+    filter: brightness(0) invert(1); /* Change icon color on hover */
 }
 
 .social-icons a {
+    width: 81px;
+    height: 76px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 55px;
-    height: 55px;
     background-color: #EFF1F3;
     border-radius: 8px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
 }
 
 .social-icons a:hover {
-    transform: translateY(-5px);
-    background-color: #5ea5f2;
+    transform: translateY(-10px); /* Move up slightly */
+    background-color: #5ea5f2; /* Change background color on hover */
 }
 
-/* Resume Button */
+.links-container {
+    display: flex;
+    align-items: center; /* Align icons and button vertically */
+    gap: 4rem; /* Increase gap for more space */
+  }
+  
+
 .resume-btn {
-    margin-left: 3rem;
+    margin-left: 10rem; /* Space between social icons and resume */
     display: inline-block;
-    width: 200px;
-    height: 60px;
+    padding: 0;
+    width: 263px;
+    height: 90px;
     background-color: #ffffff;
-    color: #333;
-    font-size: 1.2rem;
+    color: #333333;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
     font-weight: 500;
     border-radius: 8px;
     text-align: center;
-    line-height: 60px;
+    line-height: 90px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
 }
 
 .resume-btn:hover {
     background-color: #dddddd;
 }
 
-/* Responsive Styles */
+
+@keyframes dropDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px); /* Start above the text */
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(10px); /* Slight bounce down */
+    }
+    70% {
+        transform: translateY(-5px); /* Bounce up */
+    }
+    100% {
+        transform: translateY(0); /* Settle in place */
+    }
+}
+
+.drop-target {
+    display: inline-block;
+    animation: dropDown 1s ease-in-out forwards;
+    animation-delay: 0.5s; /* Delay drop by 0.5 seconds */
+}
+
+
+
+
+
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Start lower */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Reach normal position */
+    }
+}
+
+/* Apply animation to social icons */
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 81px;
+    height: 76px;
+    background-color: #EFF1F3;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    
+    /* Apply scroll-up animation */
+    animation: slideUp 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+/* Add delay for each icon for staggered effect */
+.social-icons a:nth-child(1) { animation-delay: 0.3s; } /* GitHub */
+.social-icons a:nth-child(2) { animation-delay: 0.5s; } /* LinkedIn */
+.social-icons a:nth-child(3) { animation-delay: 0.7s; } /* Behance */
+.social-icons a:nth-child(4) { animation-delay: 0.9s; } /* Email */
+
+/* Apply animation to Resume button */
+.resume-btn {
+    margin-left: 10rem; /* Space between icons and resume */
+    display: inline-block;
+    width: 263px;
+    height: 90px;
+    background-color: #ffffff;
+    color: #333333;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 90px;
+    text-decoration: none;
+    
+    /* Apply the same slide-up animation */
+    animation: slideUp 1.5s ease-out forwards;
+    opacity: 0;
+    animation-delay: 1.2s; /* Resume button appears last */
+}
+
+
+
+
+
+
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px); /* Start off-screen to the left */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Move to correct position */
+    }
+}
+
+/* Apply the animation to the text */
+.hero-intro {
+    animation: slideInLeft 2s ease-out forwards;
+    opacity: 0; /* Hide initially */
+}
+
+.hero-name {
+    animation: slideInLeft 2.5s ease-out forwards; /* Slightly delayed */
+    opacity: 0; /* Hide initially */
+}
+
+
+
+
+
+
+
+@keyframes singleZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.8); /* Slight zoom-out */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Normal size */
+    }
+}
+
+/* Apply the zoom animation to all text */
+.hero-description, 
+.hero-subtext, 
+.hero-call-to-action {
+    animation: singleZoom 1.5s ease-out forwards;
+    opacity: 0; /* Initially hidden */
+}
+
+
+
+
+
+
+
+@keyframes slightMove {
+    0% {
+        transform: translateY(0px); /* Start at normal position */
+    }
+    50% {
+        transform: translateY(-5px); /* Slightly move up */
+    }
+    100% {
+        transform: translateY(0px); /* Back to normal */
+    }
+}
+
+/* Apply the animation to the photo */
+.hero-image img {
+    animation: slightMove 2s ease-in-out forwards;
+}
+
+
+
+
+
+
+
+@keyframes waveAnimation {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(20deg); }
+    40% { transform: rotate(-10deg); }
+    60% { transform: rotate(20deg); }
+    80% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.wave {
+    display: inline-block;
+    animation: waveAnimation 1.5s infinite ease-in-out;
+    transform-origin: 70% 70%; /* Adjust rotation point */
+}
+
+
+
+
+/* Media query for tablets & split-screen */
 @media screen and (max-width: 1024px) {
     .hero-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 3rem 2rem;
-        text-align: center;
+        flex-direction: column; /* Stack text & image */
+        align-items: center; /* Center everything */
+        padding: 3rem 2rem; /* Reduce padding */
+        text-align: center; /* Center text */
     }
 
     .hero-content {
-        padding-right: 0;
+        padding-right: 0; /* Remove extra right padding */
     }
 
     .hero-name {
-        font-size: 2.8rem;
+        font-size: 60px; /* Reduce font size */
     }
 
     .hero-intro {
-        font-size: 1.8rem;
+        font-size: 36px; /* Adjust for better readability */
     }
 
     .hero-description,
     .hero-subtext,
     .hero-call-to-action {
-        font-size: 1.1rem;
+        font-size: 18px; /* Reduce text size */
     }
 
     .hero-image {
         text-align: center;
-        margin-left: 0;
+        margin-left: 0; /* Remove left margin */
         margin-top: 2rem;
     }
 
     .hero-image img {
-        max-width: 40%;
-        height: auto;
+        width: 100%; /* Make image responsive */
+        max-width: 400px; /* Limit max size */
+        height: auto; /* Keep aspect ratio */
     }
 
     .links-container {
-        flex-direction: column;
-        gap: 1.5rem;
+        flex-direction: column; /* Stack buttons */
+        gap: 2rem;
     }
 
     .resume-btn {
-        margin-left: 0;
-        width: 180px;
-        height: 55px;
-        font-size: 1rem;
-        line-height: 55px;
+        margin-left: 0; /* Center resume button */
+        width: 220px;
+        height: 70px;
+        font-size: 24px;
+        line-height: 70px;
     }
 }
 
-@media screen and (max-width: 768px) {
+
+
+
+/* Media query for tablets & split-screen */
+@media screen and (max-width: 1024px) {
     .hero-container {
-        padding: 2rem 1.5rem;
+        flex-direction: column; /* Stack text & image */
+        align-items: center; /* Center everything */
+        padding: 3rem 2rem; /* Reduce padding */
+        text-align: center; /* Center text */
+    }
+
+    .hero-content {
+        padding-right: 0; /* Remove extra right padding */
     }
 
     .hero-name {
-        font-size: 2.5rem;
+        font-size: 60px; /* Reduce font size */
     }
 
     .hero-intro {
-        font-size: 1.6rem;
+        font-size: 36px; /* Adjust for better readability */
     }
 
     .hero-description,
     .hero-subtext,
     .hero-call-to-action {
-        font-size: 1rem;
+        font-size: 18px; /* Reduce text size */
+    }
+
+    .hero-image {
+        text-align: center;
+        margin-left: 0; /* Remove left margin */
+        margin-top: 2rem;
     }
 
     .hero-image img {
-        max-width: 30%;
+        width: 100%; /* Make image responsive */
+        max-width: 400px; /* Limit max size */
+        height: auto; /* Keep aspect ratio */
+    }
+
+    .links-container {
+        flex-direction: column; /* Stack buttons */
+        gap: 2rem;
     }
 
     .resume-btn {
-        width: 160px;
-        height: 50px;
-        font-size: 0.9rem;
-        line-height: 50px;
+        margin-left: 0; /* Center resume button */
+        width: 220px;
+        height: 70px;
+        font-size: 24px;
+        line-height: 70px;
+    }
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem 1.5rem;
+    }
+
+    .hero-name {
+        font-size: 50px; /* Further reduce for mobile */
+    }
+
+    .hero-intro {
+        font-size: 28px;
+    }
+
+    .hero-description,
+    .hero-subtext,
+    .hero-call-to-action {
+        font-size: 16px; /* Reduce text size */
+    }
+
+    .hero-image img {
+        max-width: 300px; /* Smaller image on mobile */
+    }
+
+    .links-container {
+        gap: 1.5rem;
+    }
+
+    .resume-btn {
+        width: 200px;
+        height: 60px;
+        font-size: 20px;
+        line-height: 60px;
     }
 }

@@ -24,3 +24,19 @@ html, body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%; /* Prevents unexpected zooming */
+}
+
+body {
+  font-size: 1rem; /* Ensures consistency */
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-display: swap; /* Prevents FOUT (Flash of Unstyled Text) */
+}

@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import './styles/Projects.css';
+import './styles/Hero.css';
+
+
 
 import Projects from "./components/Projects";
 import MySkills from "./components/MySkills";
