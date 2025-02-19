@@ -22,11 +22,10 @@
 }
 
 .hero-image img {
-    max-width: 100%;
-    width: 800px;
-    height: 700px;
-  }
-  
+    width: 700px;
+    height: 800px;
+    border-radius: 12px;
+}
 
 .hero-intro {
     font-family: 'Poppins', sans-serif;
