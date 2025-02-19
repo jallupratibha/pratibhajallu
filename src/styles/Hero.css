@@ -42,8 +42,8 @@
 
     .hero-image img {
         width: 100%;
-        max-width: 420px; /* Adjust to match desired size */
-        height: auto;
+        max-width: 700px; /* Adjust to match desired size */
+        height: 800;
         border-radius: 12px;
     }
 
