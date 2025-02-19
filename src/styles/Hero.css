@@ -42,7 +42,7 @@ body {
 }
 
 .hero-image img {
-    max-width: 100%;
+    max-width: 30%;
     height: auto;
     border-radius: 12px;
     display: block;
@@ -148,7 +148,7 @@ body {
     }
 
     .hero-image img {
-        max-width: 90%;
+        max-width: 40%;
         height: auto;
     }
 
@@ -186,7 +186,7 @@ body {
     }
 
     .hero-image img {
-        max-width: 80%;
+        max-width: 30%;
     }
 
     .resume-btn {
