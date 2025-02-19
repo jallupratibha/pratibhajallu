@@ -37,18 +37,23 @@
     .hero-image {
         flex: 1;
         display: flex;
-        justify-content: flex-end; /* Moves the image to the right */
+        justify-content: center; /* Moves image slightly right */
         align-items: center;
         max-width: 50%;
-        padding-left: 2rem; /* Adds spacing to shift image */
+        padding-left: 2rem; /* Add spacing to shift image */
+        min-height: 850px; /* Ensure the section doesn't shrink */
     }
+    
     
     .hero-image img {
         width: 100%;
-        max-width: 750px; /* Increased width */
-        height: 850px; /* Increased height */
+        max-width: 750px; /* Adjust width as needed */
+        height: auto; /* Allows the image to maintain aspect ratio */
+        min-height: 850px; /* Forces a minimum height */
+        object-fit: cover; /* Ensures it maintains the aspect ratio */
         border-radius: 12px;
     }
+    
     
 
     .links-container {
