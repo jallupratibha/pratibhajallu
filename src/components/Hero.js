@@ -10,7 +10,7 @@ const Hero = () => (
       <p className="hero-intro">
         Hello! It's Me <br />
         <span className="hero-name">
-          PRATIBHA JALLU <span className="wave">👋</span>
+          PRATIBHA J <span className="wave">👋</span>
         </span>
 
 
