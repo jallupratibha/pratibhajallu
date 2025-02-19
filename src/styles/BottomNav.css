@@ -1,0 +1,70 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333333;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  z-index: 1000;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.bottom-nav.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(100%); /* Slide out of view */
+}
+
+.bottom-nav.visible {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0); /* Slide into view */
+}
+
+
+
+
+/* Styling for the "P" logo */
+.nav-icon {
+  margin-left: 2rem;
+}
+
+.nav-icon .logo-text {
+  font-size: 3rem; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  color: white;
+  margin-left: 1rem; /* Push the logo slightly to the right */
+
+}
+
+/* Navigation links container */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* Spacing between icons */
+  margin-right: 3rem; /* Align to the right */
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem; /* Larger font size for links */
+  display: flex;
+  align-items: center;
+  gap: 0.8rem; /* Space between icon and text */
+  transition: color 0.3s ease;
+}
+
+.nav-link i {
+  font-size: 2rem; /* Larger icon size */
+}
+
+/* Hover effect for links */
+.nav-link:hover {
+  color: #85bde7; /* Highlight color on hover */
+}
+
+

@@ -1,0 +1,15 @@
+.case-study-container {
+    display: flex; /* Use flexbox for horizontal alignment */
+    flex-direction: column; /* Stack images vertically */
+    padding: 0; /* Remove padding from container */
+    margin: 0; /* Remove margin from container */
+  }
+  
+  .case-study-image {
+    max-width: 100%; /* Ensure images fill their container */
+    margin: 0; /* Remove margin between images */
+    padding: 0; /* Remove padding between images */
+    display: block; /* Prevent extra spacing below images */
+  }
+  
+

@@ -1,0 +1,26 @@
+/* Reset margins and paddings */
+html, body {
+  margin: 0;
+  padding: 0;
+  
+  box-sizing: border-box; /* Include padding and border in dimensions */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  min-height: 100vh; /* Ensure full viewport height */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
+               'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 
+               'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased; /* Better font rendering on webkit */
+  -moz-osx-font-smoothing: grayscale; /* Better font rendering on macOS */
+}
+
+/* Ensure consistency for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /* Use the border-box model globally */
+}
+
+/* Code-specific font */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
