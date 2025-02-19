@@ -1,18 +1,13 @@
 .hero-container {
+    position: relative; /* To contain the background animation */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 4rem 6rem;
+    background-color: transparent; /* Remove base background color */
+    color: white;
+    overflow: hidden; /* Prevent overflow from animations */
 }
-
-.hero-image {
-    flex: 1;
-    text-align: right;
-    margin-left: 2rem;
-    display: flex;
-    justify-content: flex-end;
-}
-
 
 
 .hero-content {
@@ -20,16 +15,18 @@
     padding-right: 3rem; /* Increased padding for more spacing */
 }
 
-
-
-.hero-image img {
-    width: 500px; /* Adjust based on your desired size */
-    height: auto;
-    max-width: 100%; /* Ensures responsiveness */
-    border-radius: 12px;
-    object-fit: cover;
+.hero-image {
+    flex: 1;
+    text-align: right;
+    margin-left: 2rem; /* Added margin for balanced layout */
 }
 
+.hero-image img {
+    max-width: 100%;
+    width: 800px;
+    height: 700px;
+  }
+  
 
 .hero-intro {
     font-family: 'Poppins', sans-serif;
@@ -73,7 +70,10 @@
     gap: 5rem; /* Wider spacing between icons */
 }
 
-
+.social-icons {
+    display: flex;
+    gap: 1.7rem; /* Wider spacing between icons */
+}
 
 
 .social-icons img {
@@ -87,50 +87,44 @@
     filter: brightness(0) invert(1); /* Change icon color on hover */
 }
 
-
+.social-icons a {
+    width: 81px;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EFF1F3;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
 
 .social-icons a:hover {
-    transform: translateY(-10px);
-    background-color: #5ea5f2;
+    transform: translateY(-10px); /* Move up slightly */
+    background-color: #5ea5f2; /* Change background color on hover */
 }
 
 .links-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between; /* Ensures spacing */
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.social-icons {
-    display: flex;
-    gap: 1.7rem; /* Space between icons */
-}
-
-.social-icons a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 81px;
-    height: 76px;
-    background-color: #EFF1F3;
-    border-radius: 8px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
+    align-items: center; /* Align icons and button vertically */
+    gap: 4rem; /* Increase gap for more space */
+  }
   
 
 .resume-btn {
+    margin-left: 10rem; /* Space between social icons and resume */
+    display: inline-block;
+    padding: 0;
     width: 263px;
     height: 90px;
     background-color: #ffffff;
     color: #333333;
+    font-family: 'Poppins', sans-serif;
     font-size: 32px;
     font-weight: 500;
     border-radius: 8px;
     text-align: center;
     line-height: 90px;
     text-decoration: none;
-    transition: all 0.3s ease;
 }
 
 .resume-btn:hover {
