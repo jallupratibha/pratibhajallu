@@ -1,156 +1,393 @@
-.hero-container {
-    position: relative; /* Keep background animation */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 4rem 6rem;
-    background-color: transparent;
-    color: white;
-    overflow: hidden;
-}
-
-.hero-content {
-    flex: 1;
-    max-width: 50%; /* Ensure text takes half the screen */
-    padding-right: 3rem;
-}
-
-.hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 50%; /* Ensure image takes half the screen */
-}
-
-.hero-image img {
-    width: 100%; /* Make it responsive */
-    max-width: 450px; /* Adjust image width to match design */
-    height: auto;
-    border-radius: 12px;
-}
-
-/* ---- Fix Font Sizes & Spacing ---- */
-.hero-intro {
-    font-family: 'Poppins', sans-serif;
-    font-size: 42px;
-    font-weight: 400;
-    margin-bottom: 2rem;
-    color: #ffffff;
-}
-
-.hero-name {
-    font-family: 'Poppins', sans-serif;
-    font-size: 68px;
-    font-weight: 800;
-    margin-bottom: 1.5rem;
-    color: #ffffff;
-}
-
-.hero-description,
-.hero-subtext,
-.hero-call-to-action {
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.6;
-    margin: 1rem 0;
-}
-
-/* ---- Social Icons & Resume Button ---- */
-.hero-links {
-    margin-top: 2rem;
-}
-
-.hero-links h3 {
-    font-size: 30px;
-    font-weight: 800;
-    margin-bottom: 1rem;
-}
-
-.social-icons {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.social-icons img {
-    width: 40px;
-    height: 40px;
-}
-
-.resume-btn {
-    margin-left: 3rem;
-    display: inline-block;
-    width: 200px;
-    height: 70px;
-    background-color: #ffffff;
-    color: #333333;
-    font-size: 24px;
-    font-weight: 500;
-    border-radius: 8px;
-    text-align: center;
-    line-height: 70px;
-    text-decoration: none;
-}
-
-.resume-btn:hover {
-    background-color: #dddddd;
-}
-
-/* ---- 📱 Mobile & Tablet Responsiveness ---- */
-@media screen and (max-width: 1024px) {
+/* --- Desktop Fix --- */
+@media screen and (min-width: 1025px) {  
     .hero-container {
-        flex-direction: column;
+        display: flex;
         align-items: center;
-        text-align: center;
-        padding: 3rem 2rem;
+        justify-content: space-between;
+        padding: 4rem 6rem;
     }
 
     .hero-content {
-        max-width: 100%;
-        padding-right: 0;
-    }
-
-    .hero-image {
-        max-width: 100%;
-        margin-top: 2rem;
-    }
-
-    .hero-image img {
-        max-width: 380px; /* Reduce image size on tablets */
-    }
-
-    .resume-btn {
-        margin-left: 0;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .hero-image img {
-        max-width: 300px; /* Smaller image on mobile */
+        flex: 1;
+        max-width: 45%; /* Adjusted width to match split-screen layout */
+        padding-right: 2rem;
     }
 
     .hero-name {
-        font-size: 50px;
+        font-size: 74px;
+        font-weight: 800;
+        margin-bottom: 1rem;
     }
 
     .hero-intro {
-        font-size: 30px;
+        font-size: 46px;
+        margin-bottom: 2rem;
     }
 
     .hero-description,
     .hero-subtext,
     .hero-call-to-action {
-        font-size: 18px;
+        font-size: 22px;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 50%; /* Keep balance with text */
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 420px; /* Adjust to match desired size */
+        height: auto;
+        border-radius: 12px;
     }
 
     .links-container {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .resume-btn {
+        width: 220px;
+        height: 75px;
+        font-size: 28px;
+        line-height: 75px;
+    }
+}
+
+
+
+@keyframes dropDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px); /* Start above the text */
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(10px); /* Slight bounce down */
+    }
+    70% {
+        transform: translateY(-5px); /* Bounce up */
+    }
+    100% {
+        transform: translateY(0); /* Settle in place */
+    }
+}
+
+.drop-target {
+    display: inline-block;
+    animation: dropDown 1s ease-in-out forwards;
+    animation-delay: 0.5s; /* Delay drop by 0.5 seconds */
+}
+
+
+
+
+
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Start lower */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Reach normal position */
+    }
+}
+
+/* Apply animation to social icons */
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 81px;
+    height: 76px;
+    background-color: #EFF1F3;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    
+    /* Apply scroll-up animation */
+    animation: slideUp 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+/* Add delay for each icon for staggered effect */
+.social-icons a:nth-child(1) { animation-delay: 0.3s; } /* GitHub */
+.social-icons a:nth-child(2) { animation-delay: 0.5s; } /* LinkedIn */
+.social-icons a:nth-child(3) { animation-delay: 0.7s; } /* Behance */
+.social-icons a:nth-child(4) { animation-delay: 0.9s; } /* Email */
+
+/* Apply animation to Resume button */
+.resume-btn {
+    margin-left: 10rem; /* Space between icons and resume */
+    display: inline-block;
+    width: 263px;
+    height: 90px;
+    background-color: #ffffff;
+    color: #333333;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 90px;
+    text-decoration: none;
+    
+    /* Apply the same slide-up animation */
+    animation: slideUp 1.5s ease-out forwards;
+    opacity: 0;
+    animation-delay: 1.2s; /* Resume button appears last */
+}
+
+
+
+
+
+
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px); /* Start off-screen to the left */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Move to correct position */
+    }
+}
+
+/* Apply the animation to the text */
+.hero-intro {
+    animation: slideInLeft 2s ease-out forwards;
+    opacity: 0; /* Hide initially */
+}
+
+.hero-name {
+    animation: slideInLeft 2.5s ease-out forwards; /* Slightly delayed */
+    opacity: 0; /* Hide initially */
+}
+
+
+
+
+
+
+
+@keyframes singleZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.8); /* Slight zoom-out */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Normal size */
+    }
+}
+
+/* Apply the zoom animation to all text */
+.hero-description, 
+.hero-subtext, 
+.hero-call-to-action {
+    animation: singleZoom 1.5s ease-out forwards;
+    opacity: 0; /* Initially hidden */
+}
+
+
+
+
+
+
+
+@keyframes slightMove {
+    0% {
+        transform: translateY(0px); /* Start at normal position */
+    }
+    50% {
+        transform: translateY(-5px); /* Slightly move up */
+    }
+    100% {
+        transform: translateY(0px); /* Back to normal */
+    }
+}
+
+/* Apply the animation to the photo */
+.hero-image img {
+    animation: slightMove 2s ease-in-out forwards;
+}
+
+
+
+
+
+
+
+@keyframes waveAnimation {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(20deg); }
+    40% { transform: rotate(-10deg); }
+    60% { transform: rotate(20deg); }
+    80% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.wave {
+    display: inline-block;
+    animation: waveAnimation 1.5s infinite ease-in-out;
+    transform-origin: 70% 70%; /* Adjust rotation point */
+}
+
+
+
+
+/* Media query for tablets & split-screen */
+@media screen and (max-width: 1024px) {
+    .hero-container {
+        flex-direction: column; /* Stack text & image */
+        align-items: center; /* Center everything */
+        padding: 3rem 2rem; /* Reduce padding */
+        text-align: center; /* Center text */
+    }
+
+    .hero-content {
+        padding-right: 0; /* Remove extra right padding */
+    }
+
+    .hero-name {
+        font-size: 60px; /* Reduce font size */
+    }
+
+    .hero-intro {
+        font-size: 36px; /* Adjust for better readability */
+    }
+
+    .hero-description,
+    .hero-subtext,
+    .hero-call-to-action {
+        font-size: 18px; /* Reduce text size */
+    }
+
+    .hero-image {
+        text-align: center;
+        margin-left: 0; /* Remove left margin */
+        margin-top: 2rem;
+    }
+
+    .hero-image img {
+        width: 100%; /* Make image responsive */
+        max-width: 400px; /* Limit max size */
+        height: auto; /* Keep aspect ratio */
+    }
+
+    .links-container {
+        flex-direction: column; /* Stack buttons */
+        gap: 2rem;
+    }
+
+    .resume-btn {
+        margin-left: 0; /* Center resume button */
+        width: 220px;
+        height: 70px;
+        font-size: 24px;
+        line-height: 70px;
+    }
+}
+
+
+
+
+/* Media query for tablets & split-screen */
+@media screen and (max-width: 1024px) {
+    .hero-container {
+        flex-direction: column; /* Stack text & image */
+        align-items: center; /* Center everything */
+        padding: 3rem 2rem; /* Reduce padding */
+        text-align: center; /* Center text */
+    }
+
+    .hero-content {
+        padding-right: 0; /* Remove extra right padding */
+    }
+
+    .hero-name {
+        font-size: 60px; /* Reduce font size */
+    }
+
+    .hero-intro {
+        font-size: 36px; /* Adjust for better readability */
+    }
+
+    .hero-description,
+    .hero-subtext,
+    .hero-call-to-action {
+        font-size: 18px; /* Reduce text size */
+    }
+
+    .hero-image {
+        text-align: center;
+        margin-left: 0; /* Remove left margin */
+        margin-top: 2rem;
+    }
+
+    .hero-image img {
+        width: 100%; /* Make image responsive */
+        max-width: 400px; /* Limit max size */
+        height: auto; /* Keep aspect ratio */
+    }
+
+    .links-container {
+        flex-direction: column; /* Stack buttons */
+        gap: 2rem;
+    }
+
+    .resume-btn {
+        margin-left: 0; /* Center resume button */
+        width: 220px;
+        height: 70px;
+        font-size: 24px;
+        line-height: 70px;
+    }
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 768px) {
+    .hero-container {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem 1.5rem;
+    }
+
+    .hero-name {
+        font-size: 50px; /* Further reduce for mobile */
+    }
+
+    .hero-intro {
+        font-size: 28px;
+    }
+
+    .hero-description,
+    .hero-subtext,
+    .hero-call-to-action {
+        font-size: 16px; /* Reduce text size */
+    }
+
+    .hero-image img {
+        max-width: 300px; /* Smaller image on mobile */
+    }
+
+    .links-container {
         gap: 1.5rem;
     }
 
     .resume-btn {
-        width: 180px;
+        width: 200px;
         height: 60px;
         font-size: 20px;
         line-height: 60px;
