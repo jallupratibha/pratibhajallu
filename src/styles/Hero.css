@@ -1,13 +1,18 @@
 .hero-container {
-    position: relative; /* To contain the background animation */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 4rem 6rem;
-    background-color: transparent; /* Remove base background color */
-    color: white;
-    overflow: hidden; /* Prevent overflow from animations */
 }
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+    margin-left: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
 
 
 .hero-content {
@@ -15,17 +20,16 @@
     padding-right: 3rem; /* Increased padding for more spacing */
 }
 
-.hero-image {
-    flex: 1;
-    text-align: right;
-    margin-left: 2rem; /* Added margin for balanced layout */
-}
+
 
 .hero-image img {
-    width: 700px;
-    height: 800px;
+    width: 500px; /* Adjust based on your desired size */
+    height: auto;
+    max-width: 100%; /* Ensures responsiveness */
     border-radius: 12px;
+    object-fit: cover;
 }
+
 
 .hero-intro {
     font-family: 'Poppins', sans-serif;
