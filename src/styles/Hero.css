@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-/* Viewport Settings */
 html {
     font-size: 16px; /* Set base font size */
     scroll-behavior: smooth;
@@ -15,6 +14,7 @@ body {
     background-color: #0D0D0D;
     color: white;
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Hero Section */
@@ -25,14 +25,17 @@ body {
     align-items: center;
     padding: 4rem 6rem;
     overflow: hidden;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .hero-content {
     flex: 1;
-    padding-right: 3rem;
+    padding-right: 2rem;
+    min-width: 300px;
 }
 
-/* Adjust Image Sizing */
+/* Image Fix */
 .hero-image {
     flex: 1;
     text-align: right;
@@ -43,42 +46,44 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 12px;
+    display: block;
 }
 
-/* Text Styles */
+/* Typography Fix */
 .hero-intro {
-    font-size: 2.5rem; /* 40px */
+    font-size: 2.2rem; /* 35px */
     font-weight: 400;
     margin-bottom: 2rem;
 }
 
 .hero-name {
-    font-size: 4rem; /* 64px */
+    font-size: 3.5rem; /* 56px */
     font-weight: 800;
     margin-bottom: 2rem;
+    line-height: 1.2;
 }
 
 .hero-description,
 .hero-subtext,
 .hero-call-to-action {
-    font-size: 1.5rem; /* 24px */
+    font-size: 1.3rem; /* 22px */
     font-weight: 500;
-    line-height: 1.6;
+    line-height: 1.5;
     margin: 1rem 0;
 }
 
-/* Social Media Icons */
+/* Social Icons */
 .social-icons {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.2rem;
 }
 
 .social-icons a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     background-color: #EFF1F3;
     border-radius: 8px;
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -93,15 +98,15 @@ body {
 .resume-btn {
     margin-left: 3rem;
     display: inline-block;
-    width: 230px;
-    height: 70px;
+    width: 200px;
+    height: 60px;
     background-color: #ffffff;
     color: #333;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 500;
     border-radius: 8px;
     text-align: center;
-    line-height: 70px;
+    line-height: 60px;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
@@ -124,50 +129,6 @@ body {
     }
 
     .hero-name {
-        font-size: 3.5rem;
-    }
-
-    .hero-intro {
-        font-size: 2rem;
-    }
-
-    .hero-description,
-    .hero-subtext,
-    .hero-call-to-action {
-        font-size: 1.2rem;
-    }
-
-    .hero-image {
-        text-align: center;
-        margin-left: 0;
-        margin-top: 2rem;
-    }
-
-    .hero-image img {
-        max-width: 80%;
-        height: auto;
-    }
-
-    .links-container {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    .resume-btn {
-        margin-left: 0;
-        width: 200px;
-        height: 60px;
-        font-size: 1.3rem;
-        line-height: 60px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .hero-container {
-        padding: 2rem 1.5rem;
-    }
-
-    .hero-name {
         font-size: 3rem;
     }
 
@@ -178,17 +139,61 @@ body {
     .hero-description,
     .hero-subtext,
     .hero-call-to-action {
+        font-size: 1.1rem;
+    }
+
+    .hero-image {
+        text-align: center;
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+
+    .hero-image img {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .links-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .resume-btn {
+        margin-left: 0;
+        width: 180px;
+        height: 55px;
+        font-size: 1rem;
+        line-height: 55px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .hero-name {
+        font-size: 2.5rem;
+    }
+
+    .hero-intro {
+        font-size: 1.6rem;
+    }
+
+    .hero-description,
+    .hero-subtext,
+    .hero-call-to-action {
         font-size: 1rem;
     }
 
     .hero-image img {
-        max-width: 70%;
+        max-width: 80%;
     }
 
     .resume-btn {
-        width: 180px;
-        height: 55px;
-        font-size: 1.2rem;
-        line-height: 55px;
+        width: 160px;
+        height: 50px;
+        font-size: 0.9rem;
+        line-height: 50px;
     }
 }
