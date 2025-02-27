@@ -107,7 +107,9 @@
   text-align: center; /* Center text inside the button */
   transition: background-color 0.3s ease; /* Smooth hover effect */
   align-self: center; /* Center the button horizontally */
-  margin-top: 1.5rem; /* Add spacing above the button */
+  margin-top: 1rem; /* Add spacing above the button */
+  width: 220px; /* ✅ Increased button width */
+  max-width: 350px; /* Set a maximum width */
 }
 
 
@@ -129,7 +131,7 @@
 
 .mockup-screen {
   width: 100%; /* Adjust size to fit container */
-  max-width: 180px; /* Limit the size of the mockups */
+  max-width: 145px; /* Limit the size of the mockups */
   height: auto; /* Maintain aspect ratio */
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -140,7 +142,7 @@
   position: relative;
   top: 80px;
   z-index: 2;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .mockup-second {
@@ -169,15 +171,36 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  display: flex;
+  justify-content: center; /* Center content vertically if needed */
+  margin: 0 auto; /* Centers the block itself */
+  text-align: center; /* Ensures text inside is centered */
   background-color: #f9f9f9; /* Light background */
   border: 1px solid #ddd; /* Subtle border */
   border-radius: 16px; /* Rounded corners */
-  padding: 2rem; /* Inner padding */
+  padding: 2.5rem; /* Inner padding */
   margin: 2rem auto; /* Center alignment and spacing */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  max-width: 4000px; /* Restrict the width */
-  position: relative; /* Position for the numbered circle */
+  max-width: 1600px !important; /* Increased max-width & forced */
+  width: 98vw !important; /* Use viewport width and force override */
 }
+
+
+.project-right {
+  flex: 1.5; /* Increase the flex ratio */
+  max-width: 30%; /* Increase the maximum width */
+  width: 50vw; /* Set width based on viewport */
+}
+
+
+.project-left {
+  flex: 1; /* Keeps the left side smaller */
+  max-width: 40%; /* Reduce the left side width */
+}
+
+
+
+
 
 /* Number Circle */
 .project-number {
@@ -226,6 +249,17 @@
   align-items: left;
   
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
@@ -336,6 +370,12 @@
   padding: 3rem 10%;
 }
 
+
+
+
+
+
+
 /* Web Development Section */
 .blue-background {
   background-color: #e8f5fe; /* Light blue background */
@@ -371,23 +411,10 @@
 }
 
 
-/* Increase size of mockups in the Web Development section only */
-.blue-background .mockup-screen {
-  width: 350px; /* Larger size for Web Development mockups */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Shadow for depth */
-  transition: transform 0.3s ease-in-out; /* Hover effect */
-}
 
 
-/* Adjust Web Development mockup layout to be vertical */
-.blue-background .project-right {
-display: flex;
-flex-direction: column; /* Stack items vertically */
-align-items: center; /* Center align the images */
-gap: 2rem; /* Add spacing between the images */
-}
+
+
 
 
 .blue-background .mockup-screen:hover {
@@ -403,16 +430,8 @@ gap: 2rem; /* Add spacing between the images */
   gap: 2rem; /* Add spacing between the projects */
 }
 
-.blue-background .project-content {
-  display: flex;
-  justify-content: space-between; /* Align the cards side by side */
-  gap: 2rem; /* Add space between the cards */
-}
 
-.project-left {
-  flex: 1; /* Equal space for both project cards */
-  max-width: 48%; /* Slight margin for responsiveness */
-}
+
 
 
 /* Ensure all project cards have the same height */
@@ -438,7 +457,12 @@ gap: 2rem; /* Add spacing between the images */
   flex-direction: column; /* Stack content vertically */
   height: 100%; /* Ensure consistent height */
   justify-content: space-between; /* Space out image and button evenly */
+  align-items: center;
 }
+
+
+
+
 
 
 /* Add hover effect to the cards */
@@ -469,27 +493,85 @@ gap: 2rem; /* Add spacing between the images */
   margin-top: 1.5rem;
 }
 
-/* View Case Study Button */
-.view-button {
-  background-color: #98c0f4; /* Purple */
-  color: #ffffff;
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: bold;
-  text-decoration: none;
-  text-align: center;
-  transition: background-color 0.3s ease;
+/* Ensure equal height for all Web Development project blocks */
+.webdev-project {
+  display: flex;
+  align-items: stretch; /* Ensures both left and right sections stretch equally */
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+  height: 100%; /* Ensures consistent height */
 }
+
+/* Make sure left & right sections take equal height */
+.webdev-project-left,
+.webdev-project-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Even spacing */
+  height: 100%; /* Ensures full height */
+}
+
+/* Ensure the project card also takes full height */
+.webdev-project-left .webdev-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  height: 100%; /* Ensures all project cards match */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Ensure images, descriptions, and buttons are aligned */
+.webdev-project-left img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.webdev-project-left p {
+  flex-grow: 1; /* Allows content to stretch equally */
+}
+
+/* Make "View Case Study" buttons align */
+.webdev-case-study-btn {
+  background-color: #6c89f5;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  align-self: center; /* Ensure it aligns at the bottom */
+  margin-top: auto; /* Push button to bottom */
+}
+
+.webdev-case-study-btn:hover {
+  background-color: #5a74e3;
+}
+
+
+
+
 
 /* Video Walkthrough Button */
 .secondary-button {
   background-color: #4caf50; /* Green */
+  width: 200px; /* ✅ Increased button width */
+  max-width: 350px; /* Set a maximum width */
 }
 
-.view-button:hover {
-  background-color: #5549e2; /* Darker purple */
-}
 
 .secondary-button:hover {
   background-color: #3e8e41; /* Darker green */
@@ -601,6 +683,10 @@ gap: 2rem; /* Add spacing between the images */
 
 
 
+
+
+
+
 /* ✅ Apply these changes ONLY in SPLIT-SCREEN mode (between 768px - 1024px) */
 @media screen and (max-width: 1024px) and (min-width: 768px) {
   
@@ -616,6 +702,7 @@ gap: 2rem; /* Add spacing between the images */
   /* ✅ Decrease Outer Block Width */
   .unique-project-block {
     background: #f9f9f9;
+    margin-left: -2rem; /* Move the entire block left */
     border-radius: 16px;
     padding: 2rem;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -629,32 +716,64 @@ gap: 2rem; /* Add spacing between the images */
 
   /* ✅ Inner Block (Project Card) - Keep it Wider */
   .project-card {
+    margin-left: -2rem; /* Move the entire block left */
+    width: 90vw;
     background: #ffffff;
-    border-radius: 12px;
+    border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    width: 200%; /* ✅ Full width inside the outer block */
-    max-width: 750px; /* ✅ Keeps inner block wide */
-    height: auto; /* ✅ Allow height to adjust automatically */
+    
+    max-width: 900px; /* ✅ Keeps inner block wide */
+    height: 400px; /* ✅ Allow height to adjust automatically */
     position: relative;
+  }
+
+  .project-description {
+    flex-grow: 5; /* Pushes button down */
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.4;
   }
 
   /* ✅ Center "View Case Study" Button */
  
 
-  .view-button {
-    width: 70%;  /* Reduce width further */
-    max-width: 220px;  /* Limit the max width */
-    padding: 1.0rem 1.3rem;  /* Adjust padding */
-    position: relative;
-    transform: none;
-    margin: 1.5rem auto 1;
+  @media screen and (max-width: 1024px) and (min-width: 768px) {
+  
+    /* Move View Case Study button down */
+    .view-button {
+      margin-top: auto;  /* Push button to the bottom */
+      display: flex;
+      max-width: 250px; /* Keep button size reasonable */
+      width: 100%; /* Make sure button spans the width */
+      align-items: center; /* Ensure button aligns properly */
+      justify-content: center; /* Center button */
+      align-self: center; /* Align to the bottom */
+      padding: 1rem 2rem; /* Adjust padding if needed */
+      width: 320px; /* ✅ Increased button width */
+      max-width: 350px; /* Set a maximum width */
+    }
+    
+  
+    /* Ensure the project card stretches fully */
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 30px; /* Adjust this value as needed */
+      justify-content: space-between; /* Ensures content is spaced evenly */
+      height: 100%; /* Ensures it takes full height */
+      align-items: center;
+      min-height: 500px; /* Adjust this based on content */
+    }
+    
+  
   }
+  
 
   /* ✅ Hide mockup screens in SPLIT-SCREEN mode */
   .project-right {
@@ -662,15 +781,20 @@ gap: 2rem; /* Add spacing between the images */
   }
 
   .project-content {
-    flex-direction: column !important;
+    flex-direction: column !important; /* Stack content */
     align-items: center;
-    gap: 2rem;
-  }
+    text-align: center;
+}
 
   .project-left {
     max-width: 100%;
     text-align: center;
   }
+
+  .unique-project-block {
+    margin-left: -1.5rem; /* Move the entire block left */
+}
+
 }
 
 
@@ -693,6 +817,9 @@ gap: 2rem; /* Add spacing between the images */
   }
 }
 
+
+
+
 /* ✅ Apply changes ONLY for Mobile Screens */
 @media screen and (max-width: 767px) {
   .web-development-project .button-container {
@@ -714,4 +841,289 @@ gap: 2rem; /* Add spacing between the images */
     text-align: center;
     white-space: nowrap; /* Prevent wrapping */
   }
+
+  .project-right {
+    display: none !important; /* Hide mockups */
+  }
+
+  .project-content {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    
+  }
+
+  .project-left {
+    max-width: 100%;
+  }
+
+
+  .project-card {
+    margin-left: -2rem; /* Move the entire block left */
+    width: 75vw;
+    max-width: 320px; /* Slightly smaller for mobile */
+    height: 750px; /* Keep square proportions */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures elements stay within */
+    align-items: center;
+    
+  }
+
+  .project-image {
+      max-height: 300px; /* Smaller image */
+  }
+
+  .view-button {
+      width: 40%; /* Full button width */
+      margin-top: -1.5rem;
+      width: 150px; /* ✅ Increased button width */
+      max-width: 350px; /* Set a maximum width */
+
+  }
+
+  .unique-project-block {
+    margin-left: -4.7rem; /* Move the entire block left */
 }
+
+}
+
+/* ✅ SPLIT-SCREEN (1200px and below) */
+@media (max-width: 1200px) {
+  .unique-project-block .button-container {
+      display: flex;
+      flex-direction: column; /* Stack buttons */
+      align-items: center;
+      width: 100%;
+      margin-top: auto !important; /* Push buttons down */
+  }
+
+  .unique-project-block .view-button {
+      width: 100% !important; /* Full width */
+      max-width: 300px !important;
+      padding: 1rem 2rem;
+      text-align: center;
+      margin-top: auto !important; /* Push button to the bottom */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .unique-project-block .project-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between !important; /* Ensures button is at bottom */
+      height: 100% !important;
+  }
+}
+
+/* ✅ TABLETS (1024px and below) */
+@media (max-width: 1024px) {
+  .unique-project-block .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: auto !important; /* Push buttons down */
+  }
+
+  .unique-project-block .view-button {
+      width: 100% !important;
+      max-width: 300px !important;
+      padding: 1rem 2rem;
+      text-align: center;
+      margin-top: auto !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .unique-project-block .project-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between !important;
+      height: 100% !important;
+  }
+}
+
+/* ✅ PHONES (768px and below) */
+@media (max-width: 768px) {
+  .unique-project-block .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: auto !important; /* Push buttons down */
+  }
+
+  .unique-project-block .view-button {
+      width: 100% !important;
+      max-width: 300px !important;
+      padding: 1rem 2rem;
+      text-align: center;
+      margin-top: auto !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .unique-project-block .project-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between !important;
+      height: 100% !important;
+  }
+}
+
+
+/* ✅ Move UI/UX Designing project cards left in Split-Screen Mode */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .uiux-project .unique-project-block {
+    margin-left: -2.5rem !important; /* Move block further left */
+  }
+
+  .uiux-project .project-card {
+    margin-left: 0rem !important; /* Shift project card left */
+  }
+}
+
+/* ✅ Move UI/UX Designing project cards left in Mobile Screens */
+@media screen and (max-width: 767px) {
+  .uiux-project .unique-project-block {
+    margin-left: -2.7rem !important; /* Move block further left */
+  }
+
+  .uiux-project .project-card {
+    margin-left: -1.5rem !important; /* Shift project card left */
+  }
+}
+
+
+
+/* ✅ Push Web Development Projects to the Left in Split-Screen Mode */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .unique-project-block {
+    margin-left: -3.6rem !important; /* Move block further left */
+  }
+
+  .project-card {
+    margin-left: -3.1rem !important; /* Shift project card to the left */
+  }
+}
+
+/* ✅ Push Left for Mobile Screens */
+@media screen and (max-width: 767px) {
+  .unique-project-block {
+    margin-left: -4.4rem !important; /* Move block further left */
+  }
+
+  .project-card {
+    margin-left: -2.5rem !important; /* Shift project card left */
+  }
+}
+
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .view-button, .secondary-button {
+    width: 280px; /* Slightly smaller width */
+    padding: 0.9rem 2.5rem; /* Less padding */
+    font-size: 1rem; /* Reduce font size */
+    max-width: 320px;
+  }
+}
+
+
+
+@media screen and (max-width: 767px) {
+  .view-button, .secondary-button {
+    width: 100%; /* Full width */
+    max-width: 400px;
+    padding: 1rem 2rem; /* Slightly smaller padding */
+    font-size: 1rem; /* Keep text readable */
+    text-align: center;
+  }
+}
+
+
+
+
+
+/* ✅ Default Waves (For Desktop & Larger Screens) */
+.waves {
+  position: absolute;
+  bottom: 150px; /* ✅ Moves the waves upwards slightly */
+  left: 0;
+  width: 200%;
+  height: 350px;
+  background: rgba(229, 239, 250, 0.6);
+  opacity: 0.6;
+  border-radius: 50%;
+  animation: wave-motion 6s infinite ease-in-out;
+  z-index: 0 !important; /* ✅ Ensures waves are behind text */
+}
+
+/* ✅ Darker & Higher Waves on Mobile */
+@media (max-width: 768px) {
+  .waves {
+    display: block !important;
+    width: 250%;
+    height: 220px;
+    bottom: 400px; /* ✅ Moves waves up more on mobile */
+    background: rgba(100, 160, 230, 0.8);
+    opacity: 0.9;
+    z-index: 0 !important;
+  }
+}
+
+/* ✅ Wave Animation - Moves Waves Upwards */
+@keyframes wave-motion {
+  0% { transform: translateX(0) translateY(10px); } /* ✅ Start slightly higher */
+  25% { transform: translateX(-25px) translateY(-40px); } /* ✅ Move higher */
+  50% { transform: translateX(-50px) translateY(0); } /* ✅ Return */
+  75% { transform: translateX(-75px) translateY(-30px); } /* ✅ Move up again */
+  100% { transform: translateX(0) translateY(10px); } /* ✅ Loop */
+}
+
+
+
+
+
+/* ✅ Default Waves for Desktop */
+.waves {
+  position: absolute;
+  bottom: -80px; /* ✅ Moves the waves higher */
+  left: 0;
+  width: 200%;
+  height: 350px;
+  background: rgba(229, 239, 250, 0.6);
+  opacity: 0.6;
+  border-radius: 50%;
+  animation: wave-motion 4s infinite ease-in-out; /* ✅ Faster movement */
+  z-index: -10 !important; /* ✅ Keeps waves behind content */
+}
+
+/* ✅ Darker & Higher Waves on Mobile */
+@media (max-width: 768px) {
+  .waves {
+    display: block !important;
+    width: 250%;
+    height: 220px;
+    bottom: -40px !important; /* ✅ Moves waves higher */
+    background: rgba(100, 160, 230, 0.8);
+    opacity: 0.9;
+    animation: wave-motion 3.5s infinite ease-in-out; /* ✅ Even faster on mobile */
+    z-index: -10 !important;
+  }
+}
+
+/* ✅ Updated Wave Animation - Moves Faster & Higher */
+@keyframes wave-motion {
+  0% { transform: translateX(0) translateY(30px); } /* ✅ Start higher */
+  25% { transform: translateX(-25px) translateY(-60px); } /* ✅ Move up more */
+  50% { transform: translateX(-50px) translateY(20px); } /* ✅ Moves down slightly */
+  75% { transform: translateX(-75px) translateY(-50px); } /* ✅ Moves up again */
+  100% { transform: translateX(0) translateY(30px); } /* ✅ Loops back */
+}
+
+
+
+

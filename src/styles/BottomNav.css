@@ -68,3 +68,38 @@
 }
 
 
+
+
+
+
+/* ✅ Bottom Navbar - Smaller & Adjusted Layout for Phones */
+@media (max-width: 768px) {
+  .bottom-nav {
+    padding: 0.8rem !important; /* ⬇ Reduce padding */
+  }
+
+  /* ✅ Make "P" logo smaller & align left */
+  .nav-icon {
+    margin-left: 1rem !important; /* ⬇ Move closer to left */
+  }
+
+  .nav-icon .logo-text {
+    font-size: 2rem !important; /* ⬇ Smaller font size for "P" */
+    margin-left: 0.5rem !important; /* ⬇ Adjust spacing */
+  }
+
+  /* ✅ Make icons smaller & align to right */
+  .nav-links {
+    margin-right: 1rem !important; /* ⬇ Reduce right margin */
+    gap: 1rem !important; /* ⬇ Less spacing between icons */
+  }
+
+  .nav-link {
+    font-size: 1rem !important; /* ⬇ Smaller text */
+    gap: 0.5rem !important; /* ⬇ Reduce space between icon & text */
+  }
+
+  .nav-link i {
+    font-size: 1.5rem !important; /* ⬇ Smaller icons */
+  }
+}

@@ -76,54 +76,169 @@
 
 
 
+/* ✅ Desktop View - Move "Technical Skills" Text Up */
+.skill-card:nth-child(2) .skill-category { /* Technical Skills */
+  top: 21px !important; /* ⬆ Moves text up from 35px to 25px */
+}
 
 
 
 
 
-/* ===========================
-   SPLIT-SCREEN MODE FIXES (601px - 1200px)
-   =========================== */
-   @media (max-width: 1200px) and (min-width: 601px) {
-    .skills-container {
-      display: flex;
-      flex-wrap: nowrap; /* Prevent wrapping */
-      justify-content: center;
-      align-items: stretch; /* Make cards equal height */
-      gap: 2rem; /* Increase gap for more spacing */
-    }
-  
-    .skill-card {
-      flex: 0; /* Prevent auto stretching */
-      width: auto; /* Remove fixed width */
-      max-width: 320px; /* Reduce width slightly */
-      min-width: 260px; /* Ensure they don’t shrink too much */
-      padding: 1.5rem; /* Slightly adjust padding */
-      min-height: 350px; /* Decrease height */
-      display: flex;
-      flex-direction: column;
-      justify-content: center; /* Centers content inside */
-    }
-  
-    /* Adjust skill list spacing */
-    .skill-card ul {
-      margin-top: 6rem; /* Adjust spacing between header and list */
-    }
-  
-    /* Reduce font size for skill category */
-    .skill-category {
-      font-size: 1.2rem; /* Reduce font size */
-      top: 25px; /* Move titles slightly up */
-    }
-  
-    /* Move only the "Soft Skills" text lower */
-    .skill-card:last-child .skill-category {
-      top: 40px; /* Increase value to move it further down */
-    }
-  
-    /* Move only "Design Skills" heading down */
-    .skill-card:first-child .skill-category {
-      top: 40px; /* Move "Design Skills" slightly down */
-    }
+
+
+
+
+
+
+/* Move Skills List Down & Reduce Font Size in Split Screen */
+@media (max-width: 1200px) and (min-width: 601px) {
+  .skills-container {
+    display: flex !important;
+    flex-wrap: nowrap !important; /* Prevent wrapping */
+    justify-content: center !important; /* Center align */
+    align-items: stretch !important; /* Ensure equal height */
+    gap: 1.2rem !important; /* Reduce spacing */
+    width: 100% !important;
+    max-width: 120vw !important;
   }
-  
+
+  /* All skill cards - Reduce width & height */
+  .skill-card {
+    flex: 1 1 31% !important; /* Equal width distribution */
+    max-width: 220px !important; /* Reduce width */
+    min-width: 240px !important;
+    padding: 0.6rem !important; /* Reduce padding */
+    min-height: 180px !important; /* Reduce height */
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important; /* Align everything to the top */
+    align-items: center !important;
+  }
+
+  /* Reduce Font Size for Skills List */
+  .skill-card ul {
+    font-size: 0.6rem !important; /* Make skills list smaller */
+    margin-top: 2rem !important; /* Push the list further down */
+  }
+
+  .skill-card ul li {
+    font-size: 0.8rem !important; /* Further reduce font size */
+    line-height: 0.9rem !important; /* Reduce line spacing */
+  }
+
+  /* Adjust Skill List Position (Move Each List Down Slightly More) */
+  .skill-card:nth-child(1) ul {
+    margin-top: 4.7rem !important; /* Move Design Skills list down */
+    margin-right: 1rem !important; /* Extra spacing on the right */
+  }
+
+  .skill-card:nth-child(2) ul {
+    margin-top: 4.7rem !important; /* Move Technical Skills list down */
+    margin-right: 1rem !important; /* Extra spacing on the right */
+  }
+
+  .skill-card:nth-child(3) ul {
+    margin-top: 4.7rem !important; /* Move Soft Skills list down */
+  }
+
+  /* Adjust Skill Category (Heading) */
+  .skill-category {
+    font-size: 0.9rem !important; /* Keep heading readable */
+    top: 1px !important; /* Move heading slightly up */
+  }
+}
+
+
+
+/* Reduce the Height of the Blue Header */
+@media (max-width: 1200px) and (min-width: 601px) {
+  .skill-card::before {
+    height: 70px !important; /* Reduce blue header height */
+  }
+
+  /* Adjust Position of Skill Category Text */
+  .skill-category {
+    top: 20px !important; /* Move heading up */
+    font-size: 0.9rem !important; /* Keep readable size */
+  }
+
+  /* Adjust List Position to Balance Space */
+  .skill-card ul {
+    margin-top: 3rem !important; /* Adjust list placement */
+  }
+}
+
+
+
+
+/* EVEN SMALLER Skill Cards for Tablets */
+@media (max-width: 1024px) {
+  .skill-card {
+    max-width: 220px !important; /* Make cards even smaller */
+    min-width: 200px !important;
+    padding: 0.8rem !important;
+    min-height: 260px !important;
+  }
+
+  .skill-category {
+    font-size: 0.9rem !important;
+    top: 18px !important;
+  }
+}
+
+/* ✅ EVEN SMALLER Skill Cards for Phones (Move Only "Design Skills" & "Soft Skills" Down) */
+@media (max-width: 768px) {
+  .skills-container {
+    flex-wrap: wrap !important; /* Allow cards to stack */
+    justify-content: center;
+  }
+
+  .skill-card {
+    max-width: 170px !important; /* ⬆ Slightly larger width */
+    min-width: 150px !important;
+    padding: 0.5rem !important; /* ⬆ Slightly more padding */
+    min-height: 220px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important; /* ⬇ Push content down */
+    align-items: center !important;
+  }
+
+  /* ✅ Reduce the Blue Header Height */
+  .skill-card::before {
+    height: 50px !important; /* ⬆ Slightly increased for balance */
+  }
+
+
+
+  /* ✅ Move "Design Skills" Slightly Down */
+  .skill-card:nth-child(1) .skill-category { /* Design Skills */
+    top: 7px !important; /* ⬇ Moves a little down */
+  }
+
+  /* ✅ Keep "Technical Skills" in Place */
+  .skill-card:nth-child(2) .skill-category { /* Technical Skills */
+    top: 7px !important; /* No change */
+  }
+
+  /* ✅ Move "Soft Skills" Further Down */
+  .skill-card:nth-child(3) .skill-category { /* Soft Skills */
+    top: 15px !important; /* ⬇ Moves even further down */
+  }
+
+
+
+  /* ✅ Move Text Further Down */
+  .skill-card ul {
+    font-size: 0.55rem !important; /* ⬆ Slightly smaller list text */
+    margin-top: auto !important; /* ⬇ Push the list to the bottom */
+    padding-bottom: 10px !important; /* ⬆ Extra padding */
+  }
+
+  .skill-card ul li {
+    font-size: 0.7rem !important; /* ⬆ Slightly increased */
+    line-height: 0.85rem !important; /* ⬆ More spacing */
+  }
+}

@@ -13,46 +13,30 @@ const Projects = () => {
 
         <div className="projects-container">
           {/* First UI/UX Project */}
-          <div className="unique-project-block">
+          <div className="unique-project-block uiux-project">
             <div className="project-number">
               <span>1</span>
             </div>
             <div className="project-content">
               <div className="project-left">
-              <ProjectCard
-                title="Mentor Bridge - Student"
-                description="A secure platform connecting learners with mentors in fields like UI/UX, coding, and more. With mentor profiles, test sessions, in-app communication, recorded classes, and escrow payments, it ensures transparency, fairness, and seamless collaboration."
-                skills="Figma, UI/UX Designing, iOS Design"
-                image="/assets/student-image.png"
-                link="/case-study/mentorBridgeStudent"  // Navigate to case study page
-              />
-
-
-
-
+                <ProjectCard
+                  title="Mentor Bridge - Student"
+                  description="A secure platform connecting learners with mentors in fields like UI/UX, coding, and more. With mentor profiles, test sessions, in-app communication, recorded classes, and escrow payments, it ensures transparency, fairness, and seamless collaboration."
+                  skills="Figma, UI/UX Designing, iOS Design"
+                  image="/assets/student-image.png"
+                  link="/case-study/mentorBridgeStudent"
+                />
               </div>
               <div className="project-right">
-                <img
-                  src="/assets/mockup1.png"
-                  alt="Mockup Mentor Bridge - Student 1"
-                  className="mockup-screen mockup-first"
-                />
-                <img
-                  src="/assets/mockup2.png"
-                  alt="Mockup Mentor Bridge - Student 2"
-                  className="mockup-screen mockup-second"
-                />
-                <img
-                  src="/assets/mockup3.png"
-                  alt="Mockup Mentor Bridge - Student 3"
-                  className="mockup-screen mockup-third"
-                />
+                <img src="/assets/mockup1.png" alt="Mockup Mentor Bridge - Student 1" className="mockup-screen mockup-first" />
+                <img src="/assets/mockup2.png" alt="Mockup Mentor Bridge - Student 2" className="mockup-screen mockup-second" />
+                <img src="/assets/mockup3.png" alt="Mockup Mentor Bridge - Student 3" className="mockup-screen mockup-third" />
               </div>
             </div>
           </div>
 
           {/* Second UI/UX Project */}
-          <div className="unique-project-block">
+          <div className="unique-project-block uiux-project">
             <div className="project-number">
               <span>2</span>
             </div>
@@ -64,31 +48,18 @@ const Projects = () => {
                   skills="Figma, UI/UX Designing, iOS Design"
                   image="/assets/second-project-image.png"
                   link="/case-study/mentorBridgeMentor"
-
                 />
               </div>
               <div className="project-right">
-                <img
-                  src="/assets/mockup4.png"
-                  alt="Mockup Mentor Bridge - Mentor 1"
-                  className="mockup-screen mockup-first"
-                />
-                <img
-                  src="/assets/mockup5.png"
-                  alt="Mockup Mentor Bridge - Mentor 2"
-                  className="mockup-screen mockup-second"
-                />
-                <img
-                  src="/assets/mockup6.png"
-                  alt="Mockup Mentor Bridge - Mentor 3"
-                  className="mockup-screen mockup-third"
-                />
+                <img src="/assets/mockup4.png" alt="Mockup Mentor Bridge - Mentor 1" className="mockup-screen mockup-first" />
+                <img src="/assets/mockup5.png" alt="Mockup Mentor Bridge - Mentor 2" className="mockup-screen mockup-second" />
+                <img src="/assets/mockup6.png" alt="Mockup Mentor Bridge - Mentor 3" className="mockup-screen mockup-third" />
               </div>
             </div>
           </div>
 
           {/* Third UI/UX Project */}
-          <div className="unique-project-block">
+          <div className="unique-project-block uiux-project">
             <div className="project-number">
               <span>3</span>
             </div>
@@ -103,27 +74,15 @@ const Projects = () => {
                 />
               </div>
               <div className="project-right">
-                <img
-                  src="/assets/mockup7.png"
-                  alt="Mockup Cabo 1"
-                  className="mockup-screen mockup-first"
-                />
-                <img
-                  src="/assets/mockup8.png"
-                  alt="Mockup Cabo 2"
-                  className="mockup-screen mockup-second"
-                />
-                <img
-                  src="/assets/mockup9.png"
-                  alt="Mockup Cabo 3"
-                  className="mockup-screen mockup-third"
-                />
+                <img src="/assets/mockup7.png" alt="Mockup Cabo 1" className="mockup-screen mockup-first" />
+                <img src="/assets/mockup8.png" alt="Mockup Cabo 2" className="mockup-screen mockup-second" />
+                <img src="/assets/mockup9.png" alt="Mockup Cabo 3" className="mockup-screen mockup-third" />
               </div>
             </div>
           </div>
 
           {/* Fourth UI/UX Project */}
-          <div className="unique-project-block">
+          <div className="unique-project-block uiux-project">
             <div className="project-number">
               <span>4</span>
             </div>
@@ -138,21 +97,9 @@ const Projects = () => {
                 />
               </div>
               <div className="project-right">
-                <img
-                  src="/assets/mockup10.png"
-                  alt="Mockup Nykaa 1"
-                  className="mockup-screen mockup-first"
-                />
-                <img
-                  src="/assets/mockup11.png"
-                  alt="Mockup Nykaa 2"
-                  className="mockup-screen mockup-second"
-                />
-                <img
-                  src="/assets/mockup12.png"
-                  alt="Mockup Nykaa 3"
-                  className="mockup-screen mockup-third"
-                />
+                <img src="/assets/mockup10.png" alt="Mockup Nykaa 1" className="mockup-screen mockup-first" />
+                <img src="/assets/mockup11.png" alt="Mockup Nykaa 2" className="mockup-screen mockup-second" />
+                <img src="/assets/mockup12.png" alt="Mockup Nykaa 3" className="mockup-screen mockup-third" />
               </div>
             </div>
           </div>
@@ -161,8 +108,7 @@ const Projects = () => {
 
       {/* Web Development Section */}
       <div className="blue-background">
-      <div className="waves"></div>
-
+        <div className="waves"></div>
         <h3 className="projects-subtitle">Web Development</h3>
         <div className="projects-container">
           <div className="project-content">
@@ -176,9 +122,10 @@ const Projects = () => {
                 videoLink="https://drive.google.com/file/d/1CCx8A_uxuN-d4pf5dSMLIGWpNykHdKow/view?usp=sharing"
               />
             </div>
+
             <div className="project-left">
               <WebProjectCard
-                title="Flavors of India: A Culinary Exploration"
+                title="Flavors of India"
                 description="Flavors of India is a digital platform designed to celebrate the rich and diverse culinary heritage of India. With a passion for food exploration and cultural appreciation, the app aims to connect users with the authentic flavors and traditional dishes from every corner of the country."
                 skills="HTML, CSS, JavaScript"
                 image="/assets/flavors-image.png"

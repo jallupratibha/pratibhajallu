@@ -4,6 +4,12 @@ import '../styles/Contact.css';
 const Contact = () => {
   return (
     <div id="contact" className="contact-section">
+      
+      {/* ✅ Three Waves at the Bottom */}
+      <div className="waves-contact"></div>  
+      <div className="waves-contact-secondary"></div>  
+      <div className="waves-contact-third"></div>  
+
       <h2 className="contact-title">CONTACT</h2>
       <h3 className="contact-subtitle">Connect with me 😊</h3>
       <p className="contact-description">
@@ -27,6 +33,7 @@ const Contact = () => {
           <i className="fab fa-behance"></i>
         </a>
       </div>
+
     </div>
   );
 };

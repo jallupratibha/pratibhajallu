@@ -15,7 +15,7 @@
 
 .navbar-logo {
   font-family: 'Poppins', sans-serif;
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 600;
 }
 
@@ -33,7 +33,7 @@
 
 .navbar-links a {
   font-family: 'Poppins', sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
   text-decoration: none;
   color: white;
@@ -380,3 +380,35 @@ body {
         margin-top: 30px; /* Increase spacing for a better visual match */
     }
 }
+
+
+/* ✅ Reduce Navbar Font Size on Phones */
+@media screen and (max-width: 768px) {
+    .navbar-links a {
+      font-size: 16px !important; /* ⬇ Reduce font size for menu items */
+    }
+  
+    .navbar-links {
+      gap: 1rem !important; /* ⬇ Reduce spacing between items */
+    }
+  
+    .navbar {
+      padding: 1rem 2rem !important; /* ⬇ Reduce navbar padding */
+    }
+  }
+  
+/* ✅ Increase Navbar Font Size in Split-Screen Mode */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .navbar-links a {
+      font-size: 22px !important; /* ⬆ Slightly increase font size */
+    }
+  
+    .navbar-links {
+      gap: 1.5rem !important; /* ⬆ Increase spacing between items */
+    }
+  
+    .navbar {
+      padding: 1.2rem 2.5rem !important; /* ⬆ Increase navbar padding */
+    }
+  }
+  
