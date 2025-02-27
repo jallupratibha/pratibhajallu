@@ -872,8 +872,10 @@
   }
 
   .project-image {
-      max-height: 300px; /* Smaller image */
-  }
+    width: 200%; /* Make image take full width */
+    max-width: 500px; /* Increase max width */
+    height: auto; /* Maintain aspect ratio */
+}
 
   .view-button {
       width: 40%; /* Full button width */
@@ -1123,7 +1125,3 @@
   75% { transform: translateX(-75px) translateY(-50px); } /* ✅ Moves up again */
   100% { transform: translateX(0) translateY(30px); } /* ✅ Loops back */
 }
-
-
-
-
