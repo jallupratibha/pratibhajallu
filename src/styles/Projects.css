@@ -858,27 +858,22 @@
   }
 
 
+  .project-card {
+    margin-left: -2rem; /* Move the entire block left */
+    width: 75vw;
+    max-width: 320px; /* Slightly smaller for mobile */
+    height: 750px; /* Keep square proportions */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures elements stay within */
+    align-items: center;
+    
+  }
+
   .project-image {
-    width: 110% !important; /* Ensure full width */
-    max-width: 550px !important; /* Increase max width */
-    height: auto !important; /* Maintain aspect ratio */
-    display: block !important; /* Ensure visibility */
-}
-
-/* ✅ Ensure the project card is wide enough to accommodate the image */
-.project-card {
-    width: 75vw !important; /* Increase project card width */
-    max-width: 450px !important; /* Increase max width */
-    height: auto !important;
-}
-
-/* ✅ Make sure the parent container allows the image to expand */
-.web-development-project {
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-}
+      max-height: 300px; /* Smaller image */
+  }
 
   .view-button {
       width: 40%; /* Full button width */
@@ -987,7 +982,7 @@
   }
 
   .uiux-project .project-card {
-    margin-left: 0rem !important; /* Shift project card left */
+    margin-left: -2.5rem !important; /* Shift project card left */
   }
 }
 
@@ -1048,83 +1043,3 @@
   }
 }
 
-
-
-
-
-/* ✅ Default Waves (For Desktop & Larger Screens) */
-.waves {
-  position: absolute;
-  bottom: 150px; /* ✅ Moves the waves upwards slightly */
-  left: 0;
-  width: 200%;
-  height: 350px;
-  background: rgba(229, 239, 250, 0.6);
-  opacity: 0.6;
-  border-radius: 50%;
-  animation: wave-motion 6s infinite ease-in-out;
-  z-index: 0 !important; /* ✅ Ensures waves are behind text */
-}
-
-/* ✅ Darker & Higher Waves on Mobile */
-@media (max-width: 768px) {
-  .waves {
-    display: block !important;
-    width: 250%;
-    height: 220px;
-    bottom: 400px; /* ✅ Moves waves up more on mobile */
-    background: rgba(100, 160, 230, 0.8);
-    opacity: 0.9;
-    z-index: 0 !important;
-  }
-}
-
-/* ✅ Wave Animation - Moves Waves Upwards */
-@keyframes wave-motion {
-  0% { transform: translateX(0) translateY(10px); } /* ✅ Start slightly higher */
-  25% { transform: translateX(-25px) translateY(-40px); } /* ✅ Move higher */
-  50% { transform: translateX(-50px) translateY(0); } /* ✅ Return */
-  75% { transform: translateX(-75px) translateY(-30px); } /* ✅ Move up again */
-  100% { transform: translateX(0) translateY(10px); } /* ✅ Loop */
-}
-
-
-
-
-
-/* ✅ Default Waves for Desktop */
-.waves {
-  position: absolute;
-  bottom: -80px; /* ✅ Moves the waves higher */
-  left: 0;
-  width: 200%;
-  height: 350px;
-  background: rgba(229, 239, 250, 0.6);
-  opacity: 0.6;
-  border-radius: 50%;
-  animation: wave-motion 4s infinite ease-in-out; /* ✅ Faster movement */
-  z-index: -10 !important; /* ✅ Keeps waves behind content */
-}
-
-/* ✅ Darker & Higher Waves on Mobile */
-@media (max-width: 768px) {
-  .waves {
-    display: block !important;
-    width: 250%;
-    height: 220px;
-    bottom: -40px !important; /* ✅ Moves waves higher */
-    background: rgba(100, 160, 230, 0.8);
-    opacity: 0.9;
-    animation: wave-motion 3.5s infinite ease-in-out; /* ✅ Even faster on mobile */
-    z-index: -10 !important;
-  }
-}
-
-/* ✅ Updated Wave Animation - Moves Faster & Higher */
-@keyframes wave-motion {
-  0% { transform: translateX(0) translateY(30px); } /* ✅ Start higher */
-  25% { transform: translateX(-25px) translateY(-60px); } /* ✅ Move up more */
-  50% { transform: translateX(-50px) translateY(20px); } /* ✅ Moves down slightly */
-  75% { transform: translateX(-75px) translateY(-50px); } /* ✅ Moves up again */
-  100% { transform: translateX(0) translateY(30px); } /* ✅ Loops back */
-}
