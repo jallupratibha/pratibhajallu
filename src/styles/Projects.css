@@ -858,23 +858,26 @@
   }
 
 
-  .project-card {
-    margin-left: -2rem; /* Move the entire block left */
-    width: 75vw;
-    max-width: 320px; /* Slightly smaller for mobile */
-    height: 750px; /* Keep square proportions */
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Ensures elements stay within */
-    align-items: center;
-    
-  }
-
   .project-image {
-    width: 200%; /* Make image take full width */
-    max-width: 500px; /* Increase max width */
-    height: auto; /* Maintain aspect ratio */
+    width: 110% !important; /* Ensure full width */
+    max-width: 550px !important; /* Increase max width */
+    height: auto !important; /* Maintain aspect ratio */
+    display: block !important; /* Ensure visibility */
+}
+
+/* ✅ Ensure the project card is wide enough to accommodate the image */
+.project-card {
+    width: 75vw !important; /* Increase project card width */
+    max-width: 450px !important; /* Increase max width */
+    height: auto !important;
+}
+
+/* ✅ Make sure the parent container allows the image to expand */
+.web-development-project {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
 }
 
   .view-button {
