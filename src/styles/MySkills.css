@@ -188,7 +188,7 @@
   }
 }
 
-/* ✅ EVEN SMALLER Skill Cards for Phones (Move Only "Design Skills" & "Soft Skills" Down) */
+/* ✅ Increase Font Size for Skills in Phone View */
 @media (max-width: 768px) {
   .skills-container {
     flex-wrap: wrap !important; /* Allow cards to stack */
@@ -196,49 +196,45 @@
   }
 
   .skill-card {
-    max-width: 240px !important; /* ⬆ Slightly larger width */
-    min-width: 200px !important;
-    padding: 0.5rem !important; /* ⬆ Slightly more padding */
-    min-height: 220px !important;
+    max-width: 260px !important; /* ⬆ Slightly larger width */
+    min-width: 220px !important;
+    padding: 0.8rem !important; /* ⬆ Increase padding */
+    min-height: 250px !important; /* ⬆ Slightly taller */
     display: flex !important;
     flex-direction: column !important;
-    justify-content: flex-end !important; /* ⬇ Push content down */
+    justify-content: flex-start !important; /* ⬆ Align content properly */
     align-items: center !important;
   }
 
-  /* ✅ Reduce the Blue Header Height */
+  /* ✅ Increase the Blue Header Height */
   .skill-card::before {
-    height: 50px !important; /* ⬆ Slightly increased for balance */
+    height: 60px !important; /* ⬆ Increased for balance */
   }
-
-
 
   /* ✅ Move "Design Skills" Slightly Down */
   .skill-card:nth-child(1) .skill-category { /* Design Skills */
-    top: 7px !important; /* ⬇ Moves a little down */
+    top: 22px !important; /* ⬇ Moves a little down */
   }
 
   /* ✅ Keep "Technical Skills" in Place */
   .skill-card:nth-child(2) .skill-category { /* Technical Skills */
-    top: 7px !important; /* No change */
+    top: 22px !important; /* No change */
   }
 
   /* ✅ Move "Soft Skills" Further Down */
   .skill-card:nth-child(3) .skill-category { /* Soft Skills */
-    top: 15px !important; /* ⬇ Moves even further down */
+    top: 22px !important; /* ⬇ Moves even further down */
   }
 
-
-
-  /* ✅ Move Text Further Down */
+  /* ✅ Increase Text Size for Skills */
   .skill-card ul {
-    font-size: 0.55rem !important; /* ⬆ Slightly smaller list text */
+    font-size: 0.9rem !important; /* ⬆ Increase skill list text */
     margin-top: auto !important; /* ⬇ Push the list to the bottom */
-    padding-bottom: 10px !important; /* ⬆ Extra padding */
+    padding-bottom: 4px !important; /* ⬆ Extra padding */
   }
 
   .skill-card ul li {
-    font-size: 0.7rem !important; /* ⬆ Slightly increased */
-    line-height: 0.85rem !important; /* ⬆ More spacing */
+    font-size: 1rem !important; /* ⬆ Increase skill items */
+    line-height: 1.2rem !important; /* ⬆ More spacing */
   }
 }

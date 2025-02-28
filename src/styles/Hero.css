@@ -12,7 +12,8 @@
 
 
 .hero-content {
-    flex: 1;
+    
+    flex: 1.8;
     padding-right: 3rem; /* Increased padding for more spacing */
     margin-top: 0rem; /* Adjust the value to move it up */
 }
@@ -20,7 +21,7 @@
 .hero-image {
     flex: 1;
     text-align: right;
-    margin-left: 1rem; /* Increase to move right */
+    margin-left: -6rem; /* Increase to move right */
     margin-right: 0; /* Ensure it doesn't pull left */
     padding-left: 0; /* Remove negative padding */
 }

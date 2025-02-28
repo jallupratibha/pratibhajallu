@@ -40,3 +40,17 @@ body {
   font-family: 'Poppins', sans-serif;
   font-display: swap; /* Prevents FOUT (Flash of Unstyled Text) */
 }
+
+
+
+
+
+/* Prevent bounce effect (extra scrolling at the top and bottom) */
+html, body {
+  overscroll-behavior: none; /* Stops rubber-band effect */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto; /* Allow normal vertical scrolling */
+  min-height: 100vh; /* Ensure full viewport height */
+  margin: 0;
+  padding: 0;
+}

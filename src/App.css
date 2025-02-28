@@ -53,3 +53,14 @@ html, body {
 }
 
 
+
+
+
+
+/* Stop all scrolling */
+html, body {
+  overflow: hidden; /* Prevent any scrolling */
+  height: 100vh; /* Fix height to viewport */
+  margin: 0;
+  padding: 0;
+}

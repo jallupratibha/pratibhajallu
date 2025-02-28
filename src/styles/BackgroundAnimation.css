@@ -35,3 +35,78 @@
 
 
 
+
+/* Adjust background animation only for split-screen, tablets, and mobile */
+@media screen and (max-width: 1024px) {
+  .background-animation {
+    height: 100%; /* Extend full height */
+  }
+
+  .dot {
+    animation: move 10s linear infinite;
+    top: calc(-10% - 20px); /* Start above the screen */
+    left: calc(var(--random-x, 0) * 100%);
+    animation-delay: calc(-10s * var(--random-delay));
+  }
+
+  @keyframes move {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(200vh); /* Increase height to cover the photo */
+    }
+  }
+}
+
+
+
+/* Adjust background animation only for mobile screens */
+@media screen and (max-width: 768px) {
+  .background-animation {
+    height: 100%; /* Ensure full height */
+  }
+
+  .dot {
+    animation: move 10s linear infinite;
+    top: calc(-10% - 20px); /* Start above the screen */
+    left: calc(var(--random-x, 0) * 100%);
+    animation-delay: calc(-10s * var(--random-delay));
+  }
+
+  @keyframes move {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(250vh); /* Further increase height to fully cover the photo */
+    }
+  }
+}
+
+
+
+
+
+/* Adjust background animation only for tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .background-animation {
+    height: 100%; /* Ensure full height */
+  }
+
+  .dot {
+    animation: move 10s linear infinite;
+    top: calc(-10% - 20px); /* Start above the screen */
+    left: calc(var(--random-x, 0) * 100%);
+    animation-delay: calc(-10s * var(--random-delay));
+  }
+
+  @keyframes move {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(250vh); /* Increase height to fully cover the photo */
+    }
+  }
+}
