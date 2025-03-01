@@ -4,7 +4,8 @@
   padding: 4rem 4rem;
   text-align: center;
   font-family: 'Poppins', sans-serif; /* Clean font */
-  margin-bottom: 5rem; /* Add bottom margin for spacing between contact section and nav bar */
+  margin-top: 5rem !important; /* ⬇ Increase positive value to move it down */
+  margin-bottom: 10rem; /* Add bottom margin for spacing between contact section and nav bar */
 }
 
 
@@ -107,8 +108,8 @@
   padding: 3rem 4rem !important; /* ⬇ Reduce top padding */
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  margin-top: -3rem !important; /* ⬆ Move section higher */
-  margin-bottom: 5rem; /* Maintain bottom spacing */
+  margin-top: 0rem !important; /* ⬆ Move section higher */
+  margin-bottom: 3.9rem; /* Maintain bottom spacing */
 }
 
 /* ✅ Reduce Space Above "CONTACT" Title */
@@ -158,7 +159,6 @@
     margin-bottom: 1.5rem !important; /* ⬇ Reduce space */
   }
 }
-
 
 
 
