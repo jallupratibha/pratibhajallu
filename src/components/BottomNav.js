@@ -31,7 +31,7 @@ const BottomNav = () => {
       </div>
       <div className="nav-links">
         <a
-          href="https://drive.google.com/file/d/1zGL6XyJ7JuXX3EiYDigH0ALmWXDMT2d-/view?usp=sharing"
+          href="https://drive.google.com/file/d/1WkbRd9NEhsBuiMT6ft6P1Ucet75CWcKM/view?usp=sharing"
           className="nav-link"
         >
           <i className="fas fa-download"></i> Resume

@@ -53,7 +53,7 @@ const Hero = () => (
             </a>
           </div>
           <a
-            href="https://drive.google.com/file/d/1zGL6XyJ7JuXX3EiYDigH0ALmWXDMT2d-/view?usp=sharing"
+            href="https://drive.google.com/file/d/1WkbRd9NEhsBuiMT6ft6P1Ucet75CWcKM/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
             className="resume-btn">
