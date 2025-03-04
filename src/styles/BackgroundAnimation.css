@@ -4,19 +4,19 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Ensure it stays behind the content */
+  z-index: -2; /* Ensure it stays behind the content */
   background-color: #333333; /* Static black background */
   overflow: hidden; /* Prevent overflow of dots */
 }
 
 .dot {
   position: absolute;
-  width: 6px; /* Size of the dots */
-  height: 6px;
+  width: 5px; /* Size of the dots */
+  height: 5px;
   background-color: #b7cfe1; /* Dot color */
   border-radius: 50%; /* Optional: make dots circular */
-  opacity: 0.5; /* Adjust opacity here (1 is fully opaque) */
-  animation: move 10s linear infinite;
+  opacity: 0.3; /* Adjust opacity here (1 is fully opaque) */
+  animation: move 12s linear infinite;
   top: calc(-10% - 20px); /* Start above the screen */
   left: calc(var(--random-x, 0) * 100%); /* Constrain within viewport */
   animation-delay: calc(-10s * var(--random-delay)); /* Random delay for each dot */

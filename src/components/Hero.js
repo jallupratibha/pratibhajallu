@@ -11,6 +11,7 @@ const Hero = () => (
         Hello! It's Me <br />
         <span className="hero-name">
           PRATIBHA JALLU <span className="wave">👋</span>
+          
         </span>
 
 
