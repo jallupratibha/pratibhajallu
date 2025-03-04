@@ -68,7 +68,7 @@
   }
 
   .dot {
-    animation: move 10s linear infinite;
+    animation: move 12s linear infinite;
     top: calc(-10% - 20px); /* Start above the screen */
     left: calc(var(--random-x, 0) * 100%);
     animation-delay: calc(-10s * var(--random-delay));
